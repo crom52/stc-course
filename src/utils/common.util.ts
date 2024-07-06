@@ -21,15 +21,6 @@ export function truncateMiddleString(str: string, options?: TruncateOptions) {
   return str;
 }
 
-export function pageToOffset(pageInfo: Partial<Pagination>): OffsetPage {
-  const num = pageInfo?.pageSize || 10;
-  let offset = 0;
-  if (pageInfo.page && pageInfo.page !== 1)
-    offset = pageInfo.page * num - 1;
-
-  return { offset, num };
-}
-
 export const uuidGenerator = (optional?: { prefix?: string; suffix?: string }) => {
   const str = '10000000-1000-4000-8000-100000000000'.replace(
     /[018]/g,
@@ -42,3 +33,5 @@ export const uuidGenerator = (optional?: { prefix?: string; suffix?: string }) =
 export const getImg = (imgName: string) => {
   return new URL(`../assets/images/${imgName}`, import.meta.url) as any as string;
 };
+
+export const uniqueSlash = (path: string) => path.replace(/(https?:\/)|(\/)+/g, '$1$2');

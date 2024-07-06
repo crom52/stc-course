@@ -1,10 +1,7 @@
-import { DEFAULT_CACHE_TIME } from '@/constants/common.constant';
-import type { ECacheKey } from '@/enums/common.enum';
-
 /**
  * Create a local cache object
  */
-export const createStorage = ({ storage = localStorage } = {}) => {
+const createStorage = ({ storage = localStorage } = {}) => {
   const Storage = class {
     private storage = storage;
 
@@ -14,7 +11,7 @@ export const createStorage = ({ storage = localStorage } = {}) => {
      * @param {*} value cache value
      * @param expire
      */
-    set(key: ECacheKey, value: any, expire: number = DEFAULT_CACHE_TIME) {
+    set(key: ECacheKey, value: any, expire: number = 99999999999) {
       const stringData = JSON.stringify({
         value,
         expire: expire !== null ? new Date().getTime() + expire * 1000 : null,
