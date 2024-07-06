@@ -6,9 +6,6 @@
     <RouterView #="{ Component }">
       <Component :is="Component" />
     </RouterView>
-
-    <!-- alert -->
-    <AppAlert />
   </AConfigProvider>
 </template>
 

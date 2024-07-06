@@ -1,3 +1,3 @@
 export enum AppEnum {
-  APP_NAME = 'My App'
+  APP_NAME = 'My App',
 }

@@ -5,7 +5,7 @@ import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import Antd from 'ant-design-vue';
-import {setupAssets} from './asset-setup'
+import { setupAssets } from './asset-setup';
 
 const store = createPinia();
 

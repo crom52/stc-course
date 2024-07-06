@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-warmGray h-screen">Welcome</div>
+  <div class="h-screen bg-warmGray">
+    Welcome
+  </div>
 </template>
 
 <script lang="ts" setup>

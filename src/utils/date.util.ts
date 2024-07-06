@@ -1,6 +1,5 @@
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
-import { EDateFormat } from '@/enums/common.enum';
 
 type RawDateType = string | number | Dayjs | undefined | null | Date
 
@@ -16,7 +15,7 @@ export function toDayJs(date: RawDateType) {
   return dayJs;
 };
 
-export function formatDate(d: RawDateType, format?: EDateFormat) {
+export function formatDate(d: RawDateType, format?: string) {
   const date = toDayJs(d);
   if (!date)
     return null;
