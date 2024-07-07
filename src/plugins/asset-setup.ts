@@ -1,9 +1,9 @@
 // Scroll bar
 import '@/assets/styles/scroll-bar.less';
-import '@/assets/styles/normalize.less';
+import '@/assets/styles/normalize.css';
 
 // vue transition
-import '@/assets/styles/transition.less';
+import '@/assets/styles/vue-transition.css';
 
 // uno css
 import 'uno.css';
