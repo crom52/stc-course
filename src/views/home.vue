@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen bg-warmGray">
-    Welcome
+    <span class="text-primary">Welcome</span>
+    <span class="lg:hidden">MD ok</span>
   </div>
 </template>
 
