@@ -24,7 +24,7 @@ export default defineConfig({
   theme: {
     colors: {
       abd: '#555555', // app border,
-      highlight: '#ffcc00',
+      highlight: '#407bbf',
       primary: '#1677ff',
       secondary: '#64748B',
       success: '#5cb85c',

@@ -1,36 +1,57 @@
 <template>
   <div>
-    <div class="grid items-center justify-center gap-16">
-      <ul class="mt-16 text-center text-25 text-highlight">
-        <li>Dừng FOMO. Đầu tư hiệu quả bằng kiến thức.</li>
-        <li>Chọn dự án chất lượng, Đừng chọn số lượng.</li>
-      </ul>
-
-      <p class="text-center">
-        ____
-      </p>
-
-      <h3 class="mt-16 text-center text-25 text-highlight">
-        Khoá học Blockchain Toàn diện Chuyên sâu từ Cơ bản đến Nâng cao
-      </h3>
-      <div class="mx-auto overflow-hidden rounded-10">
-        <iframe
-          width="600"
-          height="400"
-          class="rounded-10"
-          src="https://www.youtube.com/embed/mMUYSM9daF4"
-        />
+    <canvas
+      id="gradient-canvas"
+      style="clip-path: polygon(100px 0px, 100% 0px, calc(100% + 225px) 100%, 250px 100%); filter: blur(0px);"
+      data-transition-in="true"
+      class="isLoaded fixed right-[-2px] top-0 z-10 h-screen w-[80%] shadow-abd md:w-1/2"
+      width="454"
+      height="600"
+    />
+    <div class="relative z-20">
+      <div class="mt-30% p-32 px-12 md:mt-18%">
+        <p font="900 italic" text="25">
+          #Slogan
+        </p>
+        <ul class="mt-16 max-w-60% text-30 font-900" md="text-55">
+          <li class="text-highlight">
+            Dừng FOMO.
+          </li>
+          <li>Đầu tư hiệu quả bằng kiến thức.</li>
+          <li>
+            Chọn dự án chất lượng, <span class="inline-block">Đừng chọn số lượng.</span>
+          </li>
+        </ul>
       </div>
-      <AButton
-        size="large"
-        type="primary"
-        @click="$router.push({ name: 'Details' })"
-      >
-        Thông tin các khoá học và đăng ký
-      </AButton>
+      <div class="mt-32 flex flex-wrap gap-16">
+        <AButton
+          size="large"
+          shape="round"
+          @click="$router.push({ name: 'Details' })"
+        >
+          Thông tin khoá học
+        </AButton>
+        <AButton
+          size="large"
+          type="primary"
+          shape="round"
+          @click="$router.push({ name: 'Payment' })"
+        >
+          Ghi danh
+        </AButton>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 </script>
+
+<style scoped lang="css">
+.isLoaded {
+  background-image: url("../assets/images/111-Photoroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .7;
+}
+</style>

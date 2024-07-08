@@ -7,11 +7,11 @@ const createStorage = ({ storage = localStorage } = {}) => {
 
     /**
      * @description set cache
-     * @param { ECacheKey} key cache key
+     * @param { string} key cache key
      * @param {*} value cache value
      * @param expire
      */
-    set(key: ECacheKey, value: any, expire: number = 99999999999) {
+    set(key: string, value: any, expire: number = 99999999999) {
       const stringData = JSON.stringify({
         value,
         expire: expire !== null ? new Date().getTime() + expire * 1000 : null,
@@ -21,10 +21,10 @@ const createStorage = ({ storage = localStorage } = {}) => {
 
     /**
      * read cache
-     * @param { ECacheKey} key cache key
+     * @param { string} key cache key
      * @param {*=} def default value
      */
-    get<T = any>(key: ECacheKey, def: any = null): T {
+    get<T = any>(key: string, def: any = null): T {
       const item = this.storage.getItem(key);
       if (item) {
         try {
@@ -61,13 +61,13 @@ const createStorage = ({ storage = localStorage } = {}) => {
 
     /**
      * set cookies
-     * @param {ECacheKey} name cookie name
+     * @param {string} name cookie name
      * @param {*} value cookie value
      * @param {number=} expire expiration time
      * If the expiration time is set, the browser automatically deletes by default
      * @example
      */
-    setCookie(name: ECacheKey, value: any, expire: number | null = DEFAULT_CACHE_TIME) {
+    setCookie(name: string, value: any, expire: number | null = DEFAULT_CACHE_TIME) {
       document.cookie = `${name}=${value}; Max-Age=${expire}`;
     }
 
@@ -75,7 +75,7 @@ const createStorage = ({ storage = localStorage } = {}) => {
      * Get cookie by key name
      * @param name
      */
-    getCookie(name: ECacheKey): string {
+    getCookie(name: string): string {
       const cookieArr = document.cookie.split('; ');
       for (let i = 0, length = cookieArr.length; i < length; i++) {
         const kv = cookieArr[i].split('=');
@@ -90,7 +90,7 @@ const createStorage = ({ storage = localStorage } = {}) => {
      * Delete the specified cookie by keyname
      * @param {string} key
      */
-    removeCookie(key: ECacheKey) {
+    removeCookie(key: string) {
       document.cookie = `${key}=; Path=/; Expires=${new Date(0).toUTCString()};`;
     }
 

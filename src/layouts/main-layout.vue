@@ -1,17 +1,4 @@
 <template>
-  <header>
-    <div class="header-wrapper main-container">
-      <div class="cursor-pointer font-700" @click="$router.push({ name: 'Root' })">
-        Trang Chủ
-      </div>
-      <div class="ml-auto">
-        <AButton type="primary" @click="$router.push({ name: headerBtnContent.routeName })">
-          {{ headerBtnContent.title }}
-        </AButton>
-      </div>
-    </div>
-  </header>
-
   <main>
     <Transition name="fade" mode="out-in">
       <RouterView #="{ Component }">
@@ -19,36 +6,10 @@
       </RouterView>
     </Transition>
   </main>
-
-<!--  <footer> -->
-<!--    <div class="footer-wrapper container"> -->
-<!--      Footer -->
-<!--      <div>Logo</div> -->
-<!--      <div>sds</div> -->
-<!--    </div> -->
-<!--  </footer> -->
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-const headerBtnContent = computed(() => {
-  let routeName = 'Payment';
-  let title = 'Đăng ký khoá học ngay';
-  switch (route.name) {
-    case 'Payment':
-      routeName = 'Details';
-      title = 'Thông Tin chi tiết về khoá học này';
-      break;
-    case 'Details':
-      routeName = 'Payment';
-      title = 'Đăng ký khoá học';
-      break;
-  }
 
-  return {
-    routeName, title,
-  };
-});
 </script>
 
 <style scoped lang="less">
@@ -71,6 +32,7 @@ header {
 main {
   min-height: calc(100vh - @headerHeight - @footerHeight);
   padding: 0 1.6rem;
+  margin-bottom: 3.2rem;
 }
 
 footer {
