@@ -1,8 +1,8 @@
 <template>
-  <div class="mx-auto mt-16 max-w-800">
+  <div class="mx-auto max-w-800 px-8">
     <div class="grid items-center justify-center gap-16 text-center">
       <div class="grid mt-16 gap-16 b rounded-10 bg-white px-16 py-25 text-18">
-        <h3 class="text-[#0268ddff] font-700">
+        <h3 class="text-highlight font-700">
           CHUYỂN KHOẢN QUA NGÂN HÀNG
         </h3>
 
@@ -15,15 +15,17 @@
           25.000.000 VND
         </p>
         <div class="mx-auto flex flex-wrap justify-center gap-16">
-          <div class="overflow-hidden rounded-10">
+          <div class="min-w-250 flex-1 overflow-hidden rounded-10">
             <img
-              width="270"
+              class="h-400 md:block md:h-full"
               :src="getImg('payment-qr.jpg')"
               alt="payment-qr-code"
             >
           </div>
-          <b class="hidden b-l b-abd md:block" />
-          <div class="grid w-300 items-center">
+
+          <b class="hidden basis-1 b-l b-abd md:block" />
+
+          <div class="grid min-w-250 flex-1 items-center">
             <ul class="grid gap-8">
               <li>
                 <span>Ngân Hàng:</span>
@@ -52,7 +54,7 @@
 
       <div class="grid mt-16 gap-16 b rounded-10 bg-white px-16 py-25 text-18">
         <h3 class="text-highlight font-700">
-          2. DONATE BẰNG CRYPTO
+          DONATE BẰNG CRYPTO
         </h3>
 
         <p class="text-highlight">
