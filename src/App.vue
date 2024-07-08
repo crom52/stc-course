@@ -14,6 +14,8 @@ import enUs from 'ant-design-vue/es/locale/en_US';
 import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context';
 
 const seedTokenGlobalConfig: ThemeConfig = {
-  token: {},
+  token: {
+    colorPrimary: '#ffcc00',
+  },
 };
 </script>

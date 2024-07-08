@@ -1,0 +1,67 @@
+<template>
+  <div class="mx-auto mt-16 max-w-700">
+    <div class="grid items-center justify-center gap-16 text-center">
+      <h3 class="text-highlight mt-16 text-25">
+        Khoá học Blockchain Toàn diện: Chuyên sâu từ Cơ bản đến Nâng cao
+      </h3>
+      <div>
+        <p>
+          Bạn đam mê khám phá công nghệ blockchain và muốn xây dựng nền tảng vững chắc trong lĩnh vực này?
+        </p>
+        <p>Khoá học Blockchain Toàn diện chính là sự lựa chọn hoàn hảo dành cho bạn.</p>
+      </div>
+
+      <p>
+        ____
+      </p>
+
+      <div>
+        <h6 class="text-highlight text-18">
+          Nội dung khoá học:
+        </h6>
+
+        <ul class="grid mt-16 list-disc gap-8 text-left text-15">
+          <li>
+            <span class="text-highlight">
+              Cơ bản về Blockchain:
+            </span>
+            <span>Khám phá cấu trúc, lịch sử và tiềm năng phát triển của blockchain. Tìm hiểu về các loại blockchain khác nhau và ứng dụng của chúng trong các lĩnh vực khác nhau.</span>
+          </li>
+          <li>
+            <span class="text-highlight">
+              Phân tích cơ bản và kỹ thuật:
+            </span>
+            <span>Học các phương pháp phân tích để đánh giá tiềm năng của các dự án blockchain. Bao gồm phân tích đồ thị nến, chỉ báo kỹ thuật như RSI, MACD và các chiến lược phân tích số liệu để đưa ra các quyết định đầu tư thông minh.</span>
+          </li>
+          <li>
+            <span class="text-highlight">
+              Bảo mật:
+            </span>
+            <span>Áp dụng giải pháp bảo mật tiên tiến và quản lý rủi ro để bảo vệ tài sản điện tử khỏi các mối đe dọa như hack, lừa đảo và mất mát thông tin cá nhân.</span>
+          </li>
+          <li>
+            <span class="text-highlight">
+              Quản lý đầu tư:
+            </span>
+            <span>Xây dựng chiến lược đầu tư phù hợp với từng giai đoạn thị trường, từ thị trường bull đến bear. Học cách quản lý rủi ro và tối ưu hóa lợi nhuận trong môi trường thị trường biến động.</span>
+          </li>
+          <li>
+            <span class="text-highlight">
+              Các chiến lược kiếm tiền:
+            </span>
+            <span>Thực hành các phương pháp như staking, yield farming và giao dịch để tối đa hóa thu nhập từ các hoạt động trên blockchain.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang=ts>
+defineProps<{
+  foo: any;
+}>();
+defineEmits<{
+  change: [v: any];
+}>();
+</script>

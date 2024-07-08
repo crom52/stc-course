@@ -23,8 +23,8 @@ export default defineConfig({
   safelist: ['bg-info', 'bg-danger', 'bg-warning', 'bg-success', 'bg-white'],
   theme: {
     colors: {
-      abd: '#dcdfe5', // app border,
-      abg: '#f4f2ee', // app background
+      abd: '#555555', // app border,
+      highlight: '#ffcc00',
       primary: '#1677ff',
       secondary: '#64748B',
       success: '#5cb85c',
