@@ -30,7 +30,7 @@ header {
 }
 
 main {
-  min-height: calc(100vh - @headerHeight - @footerHeight);
+  //min-height: 100vh;
   padding: 0 1.6rem;
   margin-bottom: 3.2rem;
 }

@@ -8,23 +8,20 @@
       width="454"
       height="600"
     />
-    <div class="relative z-20">
+    <div class="relative z-20 uppercase">
       <div class="mt-30% p-32 px-12 md:mt-20%">
-        <p font="900 italic" text="25">
-          #Slogan
-        </p>
-        <ul class="mt-16 max-w-60% text-30 font-900" md="text-55">
+        <ul class="mt-16 max-w-60% text-30 font-900" md="text-70">
           <li class="text-highlight">
             Đừng FOMO.
           </li>
           <li
-            class="text-25 text-highlight"
-            md="text-50"
+            class="text-highlight"
+            md="text-70"
           >
             Đầu tư hiệu quả bằng kiến thức.
           </li>
-          <li>
-            Chọn dự án chất lượng, <span class="inline-block">Đừng chọn số lượng.</span>
+          <li class="md:text-55">
+            Chọn dự án chất lượng, <span class="inline-block">đừng chọn số lượng.</span>
           </li>
         </ul>
       </div>
@@ -54,6 +51,7 @@
 
 <style scoped lang="css">
 .isLoaded {
+  margin: 2% 0;
   background-image: url("../assets/images/111-Photoroom.png");
   background-size: cover;
   background-repeat: no-repeat;
