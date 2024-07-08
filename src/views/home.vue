@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="grid items-center justify-center gap-16">
-      <ul class="text-highlight mt-16 text-center text-25">
+      <ul class="mt-16 text-center text-25 text-highlight">
         <li>Dừng FOMO. Đầu tư hiệu quả bằng kiến thức.</li>
         <li>Chọn dự án chất lượng, Đừng chọn số lượng.</li>
       </ul>
@@ -10,7 +10,7 @@
         ____
       </p>
 
-      <h3 class="text-highlight mt-16 text-center text-25">
+      <h3 class="mt-16 text-center text-25 text-highlight">
         Khoá học Blockchain Toàn diện Chuyên sâu từ Cơ bản đến Nâng cao
       </h3>
       <div class="mx-auto overflow-hidden rounded-10">
@@ -24,7 +24,7 @@
       <AButton
         size="large"
         type="primary"
-        @click="$router.push({ name: 'Register' })"
+        @click="$router.push({ name: 'Details' })"
       >
         Thông tin các khoá học và đăng ký
       </AButton>

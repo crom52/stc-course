@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto mt-16 max-w-700">
     <div class="grid items-center justify-center gap-16 text-center">
-      <h3 class="text-highlight mt-16 text-25">
+      <h3 class="mt-16 text-25 text-highlight">
         Khoá học Blockchain Toàn diện: Chuyên sâu từ Cơ bản đến Nâng cao
       </h3>
       <div>
@@ -12,11 +12,11 @@
       </div>
 
       <p>
-        ____
+        _____
       </p>
 
       <div>
-        <h6 class="text-highlight text-18">
+        <h6 class="text-18 text-highlight">
           Nội dung khoá học:
         </h6>
 
@@ -53,6 +53,39 @@
           </li>
         </ul>
       </div>
+
+      <p>
+        _____
+      </p>
+
+      <div>
+        <h6 class="mt-16 text-18 text-highlight">
+          Điểm nổi bật của khoá học
+        </h6>
+
+        <ul class="grid mt-16 list-disc gap-8 text-left text-15">
+          <li>
+            <span class="text-highlight">
+              Giảng viên có kinh nghiệm:
+            </span>
+            <span>Anh Đông Phạm, với hơn 20 năm kinh nghiệm trong thị trường tài chính và vai trò là founder của Saigon TradeCoin và quỹ đầu tư STC Capital.</span>
+          </li>
+          <li>
+            <span class="text-highlight">
+              Giảng viên có kinh nghiệm:
+            </span>
+            <span>Học viên có cơ hội áp dụng kiến thức ngay trong môi trường thực tế của thị trường blockchain, với các bài tập và dự án thực hành.</span>
+          </li>
+        </ul>
+      </div>
+      <AButton
+        class="mt-16"
+        type="primary"
+        size="large"
+        @click="$router.push({ name: 'Register' })"
+      >
+        Đăng ký ngay
+      </AButton>
     </div>
   </div>
 </template>
