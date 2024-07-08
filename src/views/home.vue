@@ -9,15 +9,20 @@
       height="600"
     />
     <div class="relative z-20">
-      <div class="mt-30% p-32 px-12 md:mt-18%">
+      <div class="mt-30% p-32 px-12 md:mt-20%">
         <p font="900 italic" text="25">
           #Slogan
         </p>
         <ul class="mt-16 max-w-60% text-30 font-900" md="text-55">
           <li class="text-highlight">
-            Dừng FOMO.
+            Đừng FOMO.
           </li>
-          <li>Đầu tư hiệu quả bằng kiến thức.</li>
+          <li
+            class="text-25 text-highlight"
+            md="text-50"
+          >
+            Đầu tư hiệu quả bằng kiến thức.
+          </li>
           <li>
             Chọn dự án chất lượng, <span class="inline-block">Đừng chọn số lượng.</span>
           </li>
