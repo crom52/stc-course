@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="header-wrapper main-container">
-      <div class="font-700">
-        LOGO
+      <div class="cursor-pointer font-700" @click="$router.push({ name: 'Root' })">
+        Trang Chủ
       </div>
       <div class="ml-auto">
         <AButton type="primary" @click="$router.push({ name: headerBtnContent.routeName })">
@@ -13,9 +13,11 @@
   </header>
 
   <main>
-    <RouterView #="{ Component }">
-      <Component :is="Component" />
-    </RouterView>
+    <Transition name="fade" mode="out-in">
+      <RouterView #="{ Component }">
+        <Component :is="Component" />
+      </RouterView>
+    </Transition>
   </main>
 
 <!--  <footer> -->

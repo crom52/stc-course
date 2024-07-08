@@ -82,7 +82,7 @@
         class="mt-16"
         type="primary"
         size="large"
-        @click="$router.push({ name: 'Register' })"
+        @click="$router.push({ name: 'Payment' })"
       >
         Đăng ký ngay
       </AButton>
@@ -91,10 +91,4 @@
 </template>
 
 <script setup lang=ts>
-defineProps<{
-  foo: any;
-}>();
-defineEmits<{
-  change: [v: any];
-}>();
 </script>
