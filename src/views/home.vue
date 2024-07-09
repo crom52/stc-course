@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="landing">
     <canvas
       id="gradient-canvas"
       data-transition-in="true"
@@ -31,8 +31,8 @@
             v-show="display"
             key="2"
           >
-            <p class="block whitespace-nowrap">
-              Chọn dự án <span>chất lượng</span>
+            <p class="">
+              Chọn dự án <span class="block">chất lượng</span>
             </p>
             <p class="block whitespace-nowrap">
               đừng chọn <span>số lượng.</span>
@@ -70,10 +70,15 @@ setInterval(() => {
 </script>
 
 <style scoped lang="less">
+.landing {
+  height: 100vh;
+  overflow: hidden;
+
+}
 .isLoaded {
   background-image: url("../assets/images/111-Photoroom.png");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .7;
+  opacity: .8;
 }
 </style>
