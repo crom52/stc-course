@@ -16,6 +16,8 @@ import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context';
 const seedTokenGlobalConfig: ThemeConfig = {
   token: {
     colorPrimary: '#407bbf',
+    fontFamily: 'Signika, sans-serif',
+    borderRadius: 15,
   },
 };
 </script>

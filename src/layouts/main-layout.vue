@@ -1,10 +1,10 @@
 <template>
   <main>
-    <Transition name="fade" mode="out-in">
-      <RouterView #="{ Component }">
+    <RouterView #="{ Component }">
+      <Transition name="fade" mode="out-in">
         <Component :is="Component" />
-      </RouterView>
-    </Transition>
+      </Transition>
+    </RouterView>
   </main>
 </template>
 
