@@ -46,6 +46,8 @@ export default defineConfig({
     // Text
     ['text-spotlight', 'font-600 text-15'],
     ['bggar', 'from-#23f1a3 to-#66adf3 bg-gradient-to-r'],
+    ['tgar1', 'inline-block from-#21d0f2 to-#8f4bda bg-gradient-to-r bg-clip-text text-transparent'],
+    ['tgar2', 'inline-block from-#23f1a3 to-#66adf3 bg-gradient-to-r bg-clip-text text-transparent'],
 
   ],
   postprocess: (util: UtilObject) => {

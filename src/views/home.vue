@@ -1,15 +1,12 @@
 <template>
   <div class="main-page">
-    <!--    <canvas -->
-    <!--      id="gradient-canvas" -->
-    <!--      class="thump-image fixed right-[-2px] top-10% z-10 h-80vh md:w-1/3" -->
-    <!--      width="350" -->
-    <!--      height="800" -->
-    <!--    /> -->
+    <div class="banner-warp absolute left-0 right-0 top-0 h-72">
+      hihi
+    </div>
     <div class="grid mx-auto max-w-1200 px-16 text-center">
       <!-- Slogan -->
       <h3
-        class="lg: mt-15% text-30 font-800"
+        class="mt-15% text-30 font-800"
         md="text-35"
         lg="text-50"
       >
@@ -19,7 +16,7 @@
       </h3>
 
       <p
-        class="text-cgray mt-16 text-18 font-500"
+        class="mt-16 text-18 text-cgray font-500"
         md="text-25"
         lg="text-30"
       >
@@ -28,7 +25,7 @@
 
       <!-- Register Button -->
       <div
-        class="grid grid-cols-1 mt-32 items-center justify-center gap-16"
+        class="grid grid-cols-1 mt-50 items-center justify-center gap-16"
         sm="flex"
       >
         <AButton
@@ -48,16 +45,16 @@
       </div>
 
       <!--  Sponsor -->
-      <div class="mt-42 rounded-10 md:mt-75">
-        <p class="text-highlight font-300 font-sans uppercase">
+      <div class="mt-32 rounded-10 md:mt-75">
+        <p class="text-15 text-highlight font-400 font-mono uppercase">
           Được tài trợ bởi
         </p>
 
-        <ul class="mt-16 flex flex-wrap justify-center gap-20">
+        <ul class="mt-32 flex flex-wrap justify-center gap-25">
           <li
             v-for="sponsor in sponsors"
             :key="sponsor.name"
-            class="test-box"
+            class="proposal-highlight"
           >
             <img
               :src="getImg(sponsor.imgName)"
@@ -72,22 +69,80 @@
 
       <!-- Carousel -->
       <div class="relative mt-42 overflow-hidden rounded-10 md:mt-75">
-        <ACarousel autoplay>
-          <div class="flex">
-            <div>Content 1</div>
-            <div>Image description 1</div>
+        <ACarousel :autoplay="true">
+          <div
+            id="carousel-warp"
+            class="h-full"
+          >
+            <div class="grid grid-cols-2 h-full">
+              <div class="h-full overflow-hidden rounded-10 bg-black">
+                <img
+                  :src="getImg('mrDong1.jpg')"
+                  alt="Dong Pham"
+                  class="mx-auto h-full"
+                >
+              </div>
+              <div>
+                <h3 class="tgar2 mt-10% text-30">
+                  Keyword 1
+                </h3>
+                <ul class="mt-16 text-20 font-mono">
+                  <li>marketing content1</li>
+                  <li>marketing content2</li>
+                  <li>marketing content3</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div>
-            <div>Content 2</div>
-            <div>Image description 2</div>
+
+          <div
+            id="carousel-warp"
+            class="h-full"
+          >
+            <div class="grid grid-cols-2 h-full">
+              <div class="h-full overflow-hidden rounded-10 bg-black">
+                <img
+                  :src="getImg('mrDong2.jpg')"
+                  alt="Dong Pham"
+                  class="mx-auto h-full"
+                >
+              </div>
+              <div>
+                <h3 class="tgar2 mt-10% text-30">
+                  Keyword 2
+                </h3>
+                <ul class="mt-16 text-20 font-mono">
+                  <li>marketing content1</li>
+                  <li>marketing content2</li>
+                  <li>marketing content3</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div>
-            <div>Content 3</div>
-            <div>Image description 3</div>
-          </div>
-          <div>
-            <div>Content 4</div>
-            <div>Image description 4</div>
+
+          <div
+            id="carousel-warp"
+            class="h-full"
+          >
+            <div class="grid grid-cols-2 h-full">
+              <div class="h-full overflow-hidden rounded-10 bg-black">
+                <img
+                  :src="getImg('mrDong3.jpg')"
+                  alt="Dong Pham"
+                  class="mx-auto h-full"
+                >
+              </div>
+              <div>
+                <h3 class="tgar2 mt-10% text-30">
+                  Keyword 3
+                </h3>
+                <ul class="mt-16 text-20 font-mono">
+                  <li>marketing content1</li>
+                  <li>marketing content2</li>
+                  <li>marketing content3</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </ACarousel>
       </div>
@@ -115,42 +170,21 @@ const sponsors = [
     name: 'bybit3',
     imgName: 'bybit-final2.png',
   },
-  {
-    name: 'bybit4',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit5',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit6',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit7',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit8',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit9',
-    imgName: 'bybit-final2.png',
-  },
 
 ];
 </script>
 
 <style scoped lang="less">
-.test-box {
-  position: relative;
+.banner-warp {
 
+}
+
+.proposal-highlight {
+  position: relative;
   &::after {
     content: "";
     z-index: -1;
-    bottom: -4px;
+    bottom: -7px;
     opacity: .8;
     left: -2px;
     @apply absolute rounded-3/2 w-full h-1/2 shadow-lg shadow-gray;
@@ -161,22 +195,12 @@ const sponsors = [
   @apply h-50 text-20 font-600 min-w-200;
 }
 
-.thump-image {
-  background-image: url("../assets/images/111-Photoroom.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: .5;
-}
-
 :deep(.slick-slide) {
-  height: 35rem;
-  background: #222222;
-  overflow: hidden;
-  color: white;
-  padding: 1.6rem;
-
-  background-image: url("../assets/images/111-Photoroom.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @apply h-350 overflow-hidden text-white p-26 ;
+  @apply bg-cover;
+  background-image: url("../assets/images/bg-card3.jpg");
+  div:has(#carousel-warp) {
+    @apply h-full;
+  }
 }
 </style>
