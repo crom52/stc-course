@@ -23,16 +23,10 @@ export default defineConfig({
   safelist: ['bg-info', 'bg-danger', 'bg-warning', 'bg-success', 'bg-white'],
   theme: {
     colors: {
-      abd: '#555555', // app border,
-      highlight: '#407bbf',
-      primary: '#1677ff',
-      secondary: '#64748B',
-      success: '#5cb85c',
-      info: '#1677ff',
-      warning: '#faad14',
-      danger: '#ff4d4f',
-      hint: '#94a3b8',
-      disabled: '#e2e8f0',
+      highlight: '#64a9f2',
+      bl1: '#66adf3',
+      gr1: '#23f1a3',
+      cgray: '#d0d0dc',
     },
     breakpoints: {
       'xs': '0px',
@@ -51,9 +45,8 @@ export default defineConfig({
     ['grid-center', 'grid items-center justify-items-center'],
     // Text
     ['text-spotlight', 'font-600 text-15'],
-    ['text-desc', 'text-gray'],
-    // Utility
-    ['clickable', 'cursor-pointer text-info/90 font-500 hover:text-info'],
+    ['bggar', 'from-#23f1a3 to-#66adf3 bg-gradient-to-r'],
+
   ],
   postprocess: (util: UtilObject) => {
     // 1 => 0.1rem (ex: p-1)

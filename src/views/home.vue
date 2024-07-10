@@ -9,7 +9,7 @@
     <div class="grid mx-auto max-w-1200 px-16 text-center">
       <!-- Slogan -->
       <h3
-        class="lg: mt-15% text-30 font-900"
+        class="lg: mt-15% text-30 font-800"
         md="text-35"
         lg="text-50"
       >
@@ -19,7 +19,7 @@
       </h3>
 
       <p
-        class="mt-16 text-18"
+        class="text-cgray mt-16 text-18 font-500"
         md="text-25"
         lg="text-30"
       >
@@ -33,7 +33,7 @@
       >
         <AButton
           type="primary"
-          class="btn-course :hover:bg-gradient-to-l from-#23f1a3 to-#66adf3 bg-gradient-to-r"
+          class="btn-course bggar"
           @click="$router.push({ name: 'Details' })"
         >
           Thông tin khoá học
@@ -48,101 +48,124 @@
       </div>
 
       <!--  Sponsor -->
-      <!--      <i class="svg:bybit-logo-white h-50 w-40" /> -->
-      <div class="bg-white">
-        <!--        <ACarousel autoplay> -->
-        <div><p>1</p></div>
-        <div><p>2</p></div>
-        <div><p>3</p></div>
-        <div><p>4</p></div>
-        <!--        </ACarousel> -->
+      <div class="mt-42 rounded-10">
+        <p class="text-highlight font-300 font-sans uppercase">
+          Được tài trợ bởi
+        </p>
+
+        <ul class="mt-16 flex flex-wrap justify-center gap-20">
+          <li
+            v-for="sponsor in sponsors"
+            :key="sponsor.name"
+            class="test-box"
+          >
+            <img
+              :src="getImg(sponsor.imgName)"
+              loading="lazy"
+              decoding="async"
+              :alt="sponsor.name"
+              class="w-50 md:w-70"
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Carousel -->
+      <div class="relative mt-42 overflow-hidden rounded-10">
+        <ACarousel>
+          <div class="flex">
+            <div class="h-120">
+              Hello this is contgent
+            </div>
+            <div>Hello this is image</div>
+          </div>
+          <div><h3>2</h3></div>
+          <div><h3>3</h3></div>
+          <div><h3>4</h3></div>
+        </ACarousel>
       </div>
     </div>
-
-    <!--    <div class="relative z-20 ml-10% uppercase"> -->
-    <!--      <div class="mt-20% h-300 p-32 px-12"> -->
-    <!--        <TransitionGroup -->
-    <!--          name="fade" -->
-    <!--          tag="ul" -->
-    <!--          class="mt-16 max-w-60% text-6.1vw font-900 lg:text-70" -->
-    <!--          mode="out-in" -->
-    <!--        > -->
-    <!--          <li -->
-    <!--            v-show="!display" -->
-    <!--            key="1" -->
-    <!--            class="text-highlight" -->
-    <!--          > -->
-    <!--            <p>Đừng FOMO.</p> -->
-    <!--            <p> -->
-    <!--              Đầu tư hiệu quả <span class="block">bằng kiến thức.</span> -->
-    <!--            </p> -->
-    <!--          </li> -->
-
-    <!--          <li -->
-    <!--            v-show="display" -->
-    <!--            key="2" -->
-    <!--          > -->
-    <!--            <p class=""> -->
-    <!--              Chọn dự án <span class="block">chất lượng</span> -->
-    <!--            </p> -->
-    <!--            <p class="block whitespace-nowrap"> -->
-    <!--              đừng chọn <span>số lượng.</span> -->
-    <!--            </p> -->
-    <!--          </li> -->
-    <!--        </transitiongroup> -->
-    <!--        &lt;!&ndash;        <div class="absolute left-10% top-50% mt-32 flex flex-wrap gap-16"> &ndash;&gt; -->
-    <!--        <div class="mt-32 flex flex-wrap gap-16"> -->
-    <!--          <AButton -->
-    <!--            class="h-60 w-300 b-highlight text-24 text-highlight font-600" -->
-    <!--            @click="$router.push({ name: 'Details' })" -->
-    <!--          > -->
-    <!--            Thông tin khoá học -->
-    <!--          </AButton> -->
-
-    <!--          <AButton -->
-    <!--            type="primary" -->
-    <!--            class="h-60 w-300 text-24 font-600" -->
-    <!--            @click="$router.push({ name: 'Payment' })" -->
-    <!--          > -->
-    <!--            Ghi danh -->
-    <!--          </AButton> -->
-    <!--        </div> -->
-    <!--      </div> -->
-    <!--    </div> -->
   </div>
 </template>
 
 <script lang="ts" setup>
-const display = ref<boolean>(false);
+import { getImg } from '@/utils/common.util';
 
-setInterval(() => {
-  display.value = !display.value;
-}, 3500);
+const sponsors = [
+  {
+    name: 'bybit',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'binance',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit2',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit3',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit4',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit5',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit6',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit7',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit8',
+    imgName: 'bybit-final2.png',
+  },
+  {
+    name: 'bybit9',
+    imgName: 'bybit-final2.png',
+  },
+
+];
 </script>
 
 <style scoped lang="less">
-.btn-course {
-  @apply h-50 text-20 font-600 min-w-200;
+.test-box {
+  position: relative;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    bottom: -4px;
+    opacity: .8;
+    left: -2px;
+    @apply absolute rounded-3/2 w-full h-1/2 shadow-lg shadow-gray;
+  }
 }
 
-.main-page {
-  @apply h-screen overflow-hidden;
+.btn-course {
+  @apply h-50 text-20 font-600 min-w-200;
 }
 
 .thump-image {
   background-image: url("../assets/images/111-Photoroom.png");
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: .5;
 }
 
-//:deep(.slick-slide) {
-//  text-align: center;
-//  height: 160px;
-//  line-height: 160px;
-//  background: #364d79;
-//  overflow: hidden;
-//}
-//:deep(.slick-slide h3) {
-//  color: #fff;
-//}
+:deep(.slick-slide) {
+  height: 35rem;
+  background: #222222;
+  overflow: hidden;
+  color: white;
+  padding: 1.6rem;
+}
 </style>
