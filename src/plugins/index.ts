@@ -9,13 +9,6 @@ import { setupAssets } from './asset-setup';
 
 const store = createPinia();
 
-export const setupAppPlugins = (app: App) => {
-  setupAssets();
-  dayjsSetup();
-  piniaSetup(app);
-  andDesignSetup(app);
-};
-
 const piniaSetup = (app: App) => {
   app.use(store);
 };
@@ -30,4 +23,11 @@ const dayjsSetup = () => {
 
 const andDesignSetup = (app: App) => {
   app.use(Antd);
+};
+
+export const setupAppPlugins = (app: App) => {
+  setupAssets();
+  dayjsSetup();
+  piniaSetup(app);
+  andDesignSetup(app);
 };

@@ -13,33 +13,13 @@
 </script>
 
 <style scoped lang="less">
-@headerHeight: 6.4rem;
-@footerHeight: 6.4rem;
-
-.main-container {
-  @apply h-full;
-}
-
-header {
- height: @headerHeight;
-  @apply b-b border-gray-200;
-  .header-wrapper {
-    @apply px-16 h-full w-full;
-    @apply flex items-center;
-  }
-}
-
 main {
-  //min-height: 100vh;
-  padding: 0 1.6rem;
-  margin-bottom: 3.2rem;
-}
-
-footer {
-  height: @footerHeight;
-  .footer-wrapper {
-    @apply px-16 h-full;
-    @apply flex items-center;
+  @apply relative h-screen overflow-x-hidden;
+  &::before {
+  @apply absolute z--1 top-0 left-0 w-full h-full opacity-20;
+    content: "";
+    background-image: url("../assets/images/app-background.svg");
+    z-index: -1;
   }
 }
 </style>
