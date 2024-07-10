@@ -48,7 +48,7 @@
       </div>
 
       <!--  Sponsor -->
-      <div class="mt-42 rounded-10">
+      <div class="mt-42 rounded-10 md:mt-75">
         <p class="text-highlight font-300 font-sans uppercase">
           Được tài trợ bởi
         </p>
@@ -71,17 +71,24 @@
       </div>
 
       <!-- Carousel -->
-      <div class="relative mt-42 overflow-hidden rounded-10">
-        <ACarousel>
+      <div class="relative mt-42 overflow-hidden rounded-10 md:mt-75">
+        <ACarousel autoplay>
           <div class="flex">
-            <div class="h-120">
-              Hello this is contgent
-            </div>
-            <div>Hello this is image</div>
+            <div>Content 1</div>
+            <div>Image description 1</div>
           </div>
-          <div><h3>2</h3></div>
-          <div><h3>3</h3></div>
-          <div><h3>4</h3></div>
+          <div>
+            <div>Content 2</div>
+            <div>Image description 2</div>
+          </div>
+          <div>
+            <div>Content 3</div>
+            <div>Image description 3</div>
+          </div>
+          <div>
+            <div>Content 4</div>
+            <div>Image description 4</div>
+          </div>
         </ACarousel>
       </div>
     </div>
@@ -167,5 +174,9 @@ const sponsors = [
   overflow: hidden;
   color: white;
   padding: 1.6rem;
+
+  background-image: url("../assets/images/111-Photoroom.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 </style>
