@@ -1,7 +1,14 @@
 <template>
   <div class="main-page">
     <div class="banner-warp absolute left-0 right-0 top-0 h-72">
-      hihi
+      <div class="h-full flex items-center justify-center text-center">
+        <ul class="text-18">
+          <li>
+            Discount lên tới 25% cho mỗi người
+          </li>
+          <li>Discount lên tới 25% cho mỗi người</li>
+        </ul>
+      </div>
     </div>
     <div class="grid mx-auto max-w-1200 px-16 text-center">
       <!-- Slogan -->
