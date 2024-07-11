@@ -1,19 +1,29 @@
 <template>
   <div class="main-page">
-    <div class="banner-warp absolute left-0 right-0 top-0 h-72">
+    <div class="banner-warp bg-coolGray h-72">
       <div class="h-full flex items-center justify-center text-center">
-        <ul class="text-18">
-          <li>
-            Discount lên tới 25% cho mỗi người
+        <ul class="px-12 text-16 md:text-18">
+          <li class="text-110% text-gr1">
+            Giảm giá lên tới 25%
           </li>
-          <li>Discount lên tới 25% cho mỗi người</li>
+          <li class="text-80%">
+            <span>Thông qua đăng ký tài khoản dưới ref của STC </span> <span class="inline-block">và mời nhóm bạn cùng tham gia khóa học</span>  
+          </li>
         </ul>
+
+        <AButton
+          class="hidden md:block h-40 text-17 font-600 bg-gr1 b !b-white min-w-150"
+          hover="!text-black bg-white"
+          @click="$router.push({ name: 'Payment' })"
+        >
+          Đăng ký ngay
+        </AButton>
       </div>
     </div>
     <div class="grid mx-auto max-w-1200 px-16 text-center">
       <!-- Slogan -->
       <h3
-        class="mt-10% text-30 font-800"
+        class="mt-7% text-30 font-800"
         md="text-35"
         lg="text-50"
       >
@@ -183,7 +193,9 @@ const sponsors = [
 
 <style scoped lang="less">
 .banner-warp {
-
+  background-image: url('../assets//images/offer-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .proposal-highlight {
