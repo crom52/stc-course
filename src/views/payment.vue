@@ -1,7 +1,7 @@
 <template>
   <div class="main-page mx-auto max-w-800 px-8">
     <div class="grid items-center justify-center gap-16 text-center">
-      <div class="grid mt-16 gap-16 b rounded-10 bg-white px-16 py-25 text-18">
+      <div class="grid mt-16 gap-16 rounded-10 bg-#00000080 px-16 py-25 text-18">
         <h3 class="text-highlight font-700">
           CHUYỂN KHOẢN QUA NGÂN HÀNG
         </h3>
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <div class="grid mt-16 gap-16 b rounded-10 bg-white px-16 py-25 text-18">
+      <div class="grid mt-16 gap-16 rounded-10 bg-#00000080 px-16 py-25 text-18">
         <h3 class="text-highlight font-700">
           DONATE BẰNG CRYPTO
         </h3>

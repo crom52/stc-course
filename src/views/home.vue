@@ -182,10 +182,6 @@ const sponsors = [
 </script>
 
 <style scoped lang="less">
-.main-page {
-  @apply mb-16;
-}
-
 .banner-warp {
 
 }
