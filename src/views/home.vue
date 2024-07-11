@@ -1,6 +1,6 @@
 <template>
-  <div class="main-page">
-    <div class="banner-warp bg-coolGray h-72">
+  <div class="main-page relative">
+    <div class="banner-warp sticky top-0 h-72">
       <div class="h-full flex items-center justify-center text-center">
         <ul class="px-12 text-16 md:text-18">
           <li class="text-110% text-gr1">
@@ -92,7 +92,7 @@
             class="h-full"
           >
             <div class="grid grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 bg-black">
+              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong1.jpg')"
                   alt="Dong Pham"
@@ -117,7 +117,7 @@
             class="h-full"
           >
             <div class="grid grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 bg-black">
+              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong2.jpg')"
                   alt="Dong Pham"
@@ -142,7 +142,7 @@
             class="h-full"
           >
             <div class="grid grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 bg-black">
+              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong3.jpg')"
                   alt="Dong Pham"
