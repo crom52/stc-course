@@ -91,7 +91,7 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid grid-cols-2 h-full">
+            <div class="grid md:grid-cols-2 h-full">
               <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong1.jpg')"
@@ -101,12 +101,12 @@
               </div>
               <div>
                 <h3 class="mt-10% tgar2 text-30">
-                  Keyword 1
+                  Xây dựng nền tảng
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
-                  <li>marketing content1</li>
-                  <li>marketing content2</li>
-                  <li>marketing content3</li>
+                  <li>Tạo dựng nền tảng </li>
+                  <li class="capitalize">lý thuyết, kiến thức</li>
+                  <li>Vững vàng</li>
                 </ul>
               </div>
             </div>
@@ -116,7 +116,7 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid grid-cols-2 h-full">
+            <div class="grid md:grid-cols-2 h-full">
               <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong2.jpg')"
@@ -126,12 +126,12 @@
               </div>
               <div>
                 <h3 class="mt-10% tgar2 text-30">
-                  Keyword 2
+                  Phát triển chiến lược
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
-                  <li>marketing content1</li>
-                  <li>marketing content2</li>
-                  <li>marketing content3</li>
+                  <li>Vận dụng tài nguyên</li>
+                  <li>Phát triển chiến lược</li>
+                  <li class="capitalize">chặt chẽ, linh hoạt</li>
                 </ul>
               </div>
             </div>
@@ -141,7 +141,7 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid grid-cols-2 h-full">
+            <div class="grid md:grid-cols-2 h-full">
               <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
                 <img
                   :src="getImg('mrDong3.jpg')"
@@ -151,12 +151,11 @@
               </div>
               <div>
                 <h3 class="mt-10% tgar2 text-30">
-                  Keyword 3
+                  Tối ưu tiềm năng
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
-                  <li>marketing content1</li>
-                  <li>marketing content2</li>
-                  <li>marketing content3</li>
+                  <li>Nhận biết cơ hội</li>
+                  <li>Tối đa hóa lợi nhuận</li>
                 </ul>
               </div>
             </div>
@@ -175,19 +174,6 @@ const sponsors = [
     name: 'bybit',
     imgName: 'bybit-final2.png',
   },
-  {
-    name: 'binance',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit2',
-    imgName: 'bybit-final2.png',
-  },
-  {
-    name: 'bybit3',
-    imgName: 'bybit-final2.png',
-  },
-
 ];
 </script>
 
