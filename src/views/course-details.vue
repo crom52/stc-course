@@ -79,7 +79,7 @@
           </li>
           <li>
             <span class="text-highlight font-600">
-              Giảng viên có kinh nghiệm:
+              Thực hành trực tiếp:
             </span>
             <span>Học viên có cơ hội áp dụng kiến thức ngay trong môi trường thực tế của thị trường blockchain, với các bài tập và dự án thực hành.</span>
           </li>
