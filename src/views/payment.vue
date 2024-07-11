@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-800 px-8">
+  <div class="main-page mx-auto max-w-800 px-8">
     <div class="grid items-center justify-center gap-16 text-center">
       <div class="grid mt-16 gap-16 b rounded-10 bg-white px-16 py-25 text-18">
         <h3 class="text-highlight font-700">
@@ -23,7 +23,7 @@
             >
           </div>
 
-          <b class="hidden basis-1 b-l b-abd md:block" />
+          <b class="b-abd hidden basis-1 b-l md:block" />
 
           <div class="grid min-w-250 flex-1 items-center">
             <ul class="grid gap-8">

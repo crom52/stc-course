@@ -13,7 +13,7 @@
     <div class="grid mx-auto max-w-1200 px-16 text-center">
       <!-- Slogan -->
       <h3
-        class="mt-15% text-30 font-800"
+        class="mt-10% text-30 font-800"
         md="text-35"
         lg="text-50"
       >
@@ -52,7 +52,7 @@
       </div>
 
       <!--  Sponsor -->
-      <div class="mt-32 rounded-10 md:mt-75">
+      <div class="mt-32 rounded-10 md:mt-65">
         <p class="text-15 text-highlight font-400 font-mono uppercase">
           Được tài trợ bởi
         </p>
@@ -90,7 +90,7 @@
                 >
               </div>
               <div>
-                <h3 class="tgar2 mt-10% text-30">
+                <h3 class="mt-10% tgar2 text-30">
                   Keyword 1
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
@@ -115,7 +115,7 @@
                 >
               </div>
               <div>
-                <h3 class="tgar2 mt-10% text-30">
+                <h3 class="mt-10% tgar2 text-30">
                   Keyword 2
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
@@ -140,7 +140,7 @@
                 >
               </div>
               <div>
-                <h3 class="tgar2 mt-10% text-30">
+                <h3 class="mt-10% tgar2 text-30">
                   Keyword 3
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
@@ -182,6 +182,10 @@ const sponsors = [
 </script>
 
 <style scoped lang="less">
+.main-page {
+  @apply mb-16;
+}
+
 .banner-warp {
 
 }
