@@ -7,12 +7,12 @@
             Giảm giá lên tới 25%
           </li>
           <li class="text-80%">
-            <span>Thông qua đăng ký tài khoản dưới ref của STC </span> <span class="inline-block">và mời nhóm bạn cùng tham gia khóa học</span>  
+            <span>Thông qua đăng ký tài khoản dưới ref của STC </span> <span class="inline-block">và mời nhóm bạn cùng tham gia khóa học</span>
           </li>
         </ul>
 
         <AButton
-          class="hidden md:block h-40 text-17 font-600 bg-gr1 b !b-white min-w-150"
+          class="hidden h-40 min-w-150 b bg-gr1 text-17 font-600 md:block !b-white"
           hover="!text-black bg-white"
           @click="$router.push({ name: 'Payment' })"
         >
@@ -91,8 +91,8 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
+            <div class="grid h-full md:grid-cols-2">
+              <div class="hidden h-full overflow-hidden rounded-10 bg-black md:block">
                 <img
                   :src="getImg('mrDong1.jpg')"
                   alt="Dong Pham"
@@ -105,7 +105,9 @@
                 </h3>
                 <ul class="mt-16 text-20 font-mono">
                   <li>Tạo dựng nền tảng </li>
-                  <li class="capitalize">lý thuyết, kiến thức</li>
+                  <li class="capitalize">
+                    lý thuyết, kiến thức
+                  </li>
                   <li>Vững vàng</li>
                 </ul>
               </div>
@@ -116,8 +118,8 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
+            <div class="grid h-full md:grid-cols-2">
+              <div class="hidden h-full overflow-hidden rounded-10 bg-black md:block">
                 <img
                   :src="getImg('mrDong2.jpg')"
                   alt="Dong Pham"
@@ -131,7 +133,9 @@
                 <ul class="mt-16 text-20 font-mono">
                   <li>Vận dụng tài nguyên</li>
                   <li>Phát triển chiến lược</li>
-                  <li class="capitalize">chặt chẽ, linh hoạt</li>
+                  <li class="capitalize">
+                    chặt chẽ, linh hoạt
+                  </li>
                 </ul>
               </div>
             </div>
@@ -141,8 +145,8 @@
             id="carousel-warp"
             class="h-full"
           >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
+            <div class="grid h-full md:grid-cols-2">
+              <div class="hidden h-full overflow-hidden rounded-10 bg-black md:block">
                 <img
                   :src="getImg('mrDong3.jpg')"
                   alt="Dong Pham"
