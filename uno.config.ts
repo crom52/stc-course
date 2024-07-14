@@ -23,10 +23,9 @@ export default defineConfig({
   safelist: ['bg-info', 'bg-danger', 'bg-warning', 'bg-success', 'bg-white'],
   theme: {
     colors: {
-      highlight: '#64a9f2',
-      bl1: '#66adf3',
-      gr1: '#23f1a3',
-      cgray: '#d0d0dc',
+      abg: '#f6f9fc', // app background
+      red1: '#b82a2f',
+      yel1: '#eebe05',
     },
     breakpoints: {
       'xs': '0px',
@@ -39,15 +38,13 @@ export default defineConfig({
   },
   shortcuts: [
     // Flex
-    ['flex-center', 'flex items-center justify-center'],
-    ['flex-btw-center', 'flex items-center justify-between'],
+    ['flex-cc', 'flex items-center justify-center'],
+    ['flex-cb', 'flex items-center justify-between'],
     // Grid
-    ['grid-center', 'grid items-center justify-items-center'],
-    // Text
-    ['text-spotlight', 'font-600 text-15'],
-    ['bggar', 'from-#23f1a3 to-#66adf3 bg-gradient-to-r'],
-    ['tgar1', 'inline-block from-#21d0f2 to-#8f4bda bg-gradient-to-r bg-clip-text text-transparent'],
-    ['tgar2', 'inline-block from-#23f1a3 to-#66adf3 bg-gradient-to-r bg-clip-text text-transparent'],
+    ['grid-cc', 'grid items-center justify-center'],
+    // Other
+    ['wh-full', 'w-full h-full'],
+    ['wh-screen', 'w-screen h-screen'],
 
   ],
   postprocess: (util: UtilObject) => {
