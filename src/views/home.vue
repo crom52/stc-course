@@ -110,8 +110,9 @@ setInterval(() => {
   @apply rounded-25 relative h-full;
   filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
   &::before {
+    @apply md:content-[''];
     @apply absolute w-300 h-60 rounded-tl-25;
-    content:  '';
+    content: none;
     top: -39px;
     right: 0;
     background: rgb(145, 252, 149);
