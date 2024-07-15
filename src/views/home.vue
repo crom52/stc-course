@@ -116,9 +116,9 @@
           <i class="i-material-symbols-arrow-outward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
         </div>
         <ul class="pl-16 text-16 font-400">
-          <li>Tp. Hà Nội</li>
+          <li>TP. Hà Nội</li>
           <li class="mt-4">
-            Tp. Hồ Chí Minh
+            TP. Hồ Chí Minh
           </li>
         </ul>
 
