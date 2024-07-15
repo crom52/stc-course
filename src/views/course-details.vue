@@ -1,5 +1,5 @@
 <template>
-  <div class="main-page mx-auto mt-16 max-w-700">
+  <div class="main-page details-page mx-auto mt-16 max-w-700">
     <div class="grid items-center justify-center gap-16 text-center">
       <h3 class="text-highlight mt-16 text-25 font-900">
         Khoá học Blockchain Toàn diện, <span class="inline-block">Chuyên sâu từ Cơ bản đến Nâng cao</span>
@@ -10,14 +10,6 @@
         </p>
         <p>Khoá học Blockchain Toàn diện chính là sự lựa chọn hoàn hảo dành cho bạn.</p>
       </div>
-      <!--
-      <div class="mx-auto overflow-hidden rounded-10">
-        <iframe
-          class="h-300 w-400 rounded-10 md:w-600"
-          src="https://www.youtube.com/embed/mMUYSM9daF4"
-        />
-      </div> -->
-
       <p>
         _____
       </p>
@@ -98,3 +90,11 @@
 
 <script setup lang=ts>
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.details-page{
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+</style>
