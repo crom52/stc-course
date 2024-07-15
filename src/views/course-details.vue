@@ -1,7 +1,7 @@
 <template>
   <div class="main-page mx-auto mt-16 max-w-700">
     <div class="grid items-center justify-center gap-16 text-center">
-      <h3 class="mt-16 text-25 text-highlight font-900">
+      <h3 class="text-highlight mt-16 text-25 font-900">
         Khoá học Blockchain Toàn diện, <span class="inline-block">Chuyên sâu từ Cơ bản đến Nâng cao</span>
       </h3>
       <div class="text-15 font-500">
@@ -10,20 +10,20 @@
         </p>
         <p>Khoá học Blockchain Toàn diện chính là sự lựa chọn hoàn hảo dành cho bạn.</p>
       </div>
-
+      <!--
       <div class="mx-auto overflow-hidden rounded-10">
         <iframe
           class="h-300 w-400 rounded-10 md:w-600"
           src="https://www.youtube.com/embed/mMUYSM9daF4"
         />
-      </div>
+      </div> -->
 
       <p>
         _____
       </p>
 
       <div>
-        <h6 class="text-18 text-highlight font-700">
+        <h6 class="text-highlight text-18 font-700">
           Nội dung khoá học:
         </h6>
 
@@ -66,7 +66,7 @@
       </p>
 
       <div>
-        <h6 class="mt-16 text-18 text-highlight font-700">
+        <h6 class="text-highlight mt-16 text-18 font-700">
           Điểm nổi bật của khoá học
         </h6>
 
@@ -86,12 +86,11 @@
         </ul>
       </div>
       <AButton
-        class="mt-16"
-        type="primary"
-        size="large"
+        class="mt-16 h-50 bg-red1 text-18 text-white md:w-200"
+        block
         @click="$router.push({ name: 'Payment' })"
       >
-        Đăng ký ngay
+        Ghi danh
       </AButton>
     </div>
   </div>

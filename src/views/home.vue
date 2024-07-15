@@ -5,7 +5,7 @@
       class="relative col-span-4 row-span-2"
       lg="row-span-4"
     >
-      <div class="folder bg-yel1">
+      <div class="folder bg-#faebd7">
         <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
           <img
             class="ml-8 h-55"
@@ -13,7 +13,7 @@
             alt="stc logo"
           >
           <AButton
-            class="z-100 mr-30 mt-12 hidden h-50 w-200 text-18 font-800 md:block"
+            class="z-100 mr-30 mt-12 hidden h-50 w-200 bg-red1 text-18 text-white font-800 md:block"
             shape="round"
             @click="$router.push({ name: 'Payment' })"
           >
@@ -23,7 +23,7 @@
         <div class="h-full flex p-32">
           <!-- Slogan -->
           <div
-            class="z-10 min-h-350 flex-1 text-center text-40 font-900"
+            class="z-10 min-h-450 flex-1 text-center text-40 font-900"
             md="text-left ml-50px md:text-5.5vw"
             lg="text-70"
           >
@@ -56,18 +56,16 @@
               </li>
             </TransitionGroup>
 
-            <div class="absolute bottom-30 left-30 z-120 flex gap-16 lg:bottom-120 md:left-80">
+            <div class="absolute bottom-30 left-16 right-16 z-120 grid items-stretch gap-8 lg:bottom-100 md:(left-80 flex)">
               <AButton
-                class="h-50 w-200 text-18"
-                shape="round"
+                class="h-50 text-18 md:w-200"
                 @click="$router.push({ name: 'Details' })"
               >
                 Thông tin khoá học
               </AButton>
 
               <AButton
-                class="h-50 w-200 bg-red1 text-18 text-white"
-                shape="round"
+                class="h-50 bg-red1 text-18 text-white md:w-200"
                 @click="$router.push({ name: 'Payment' })"
               >
                 Ghi danh
@@ -92,10 +90,10 @@
 
     <!-- card video -->
     <div
-      class="col-span-4 row-span-2 h-full min-h-250 rounded-25 shadow-xl"
+      class="col-span-4 row-span-2 h-full min-h-250 rounded-20 shadow-xl"
       lg="col-span-2"
     >
-      <div class="mx-auto h-inherit overflow-hidden rounded-25">
+      <div class="mx-auto h-inherit overflow-hidden rounded-20">
         <iframe
           class="h-inherit w-full"
           src="https://www.youtube.com/embed/mMUYSM9daF4"
@@ -105,22 +103,22 @@
 
     <!-- card course name span 1 -->
     <div
-      class="col-span-4 row-span-2 overflow-hidden rounded-25 bg-white shadow-xl"
+      class="col-span-4 row-span-2 overflow-hidden rounded-20 bg-white shadow-xl"
       sm="col-span-2"
       lg="col-span-1"
     >
-      <img :src="getImg('course-overview.png')" alt="course details">
+      <img :src="getImg('course-overview2.png')" alt="course details">
       <div class="grid items-stretch p-8">
         <div class="flex items-center justify-between">
-          <h3 class="text-30 font-700">
+          <h3 class="cursor-pointer text-30 font-700 hover:text-red1" @click="$router.push({ name: 'Details' })">
             Khóa 03
           </h3>
-          <i class="i-mdi:arrow-right-drop-circle cursor-pointer text-50 text-red1" @click="$router.push({ name: 'Details' })" />
+          <i class="i-material-symbols-arrow-outward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
         </div>
-        <ul class="text-16 text-yel1 font-500">
-          <li>Hà Nội</li>
+        <ul class="pl-16 text-16 text-yel1 font-400">
+          <li>Tp. Hà Nội</li>
           <li class="mt-4">
-            Tp.Hồ chí minh
+            Tp. Hồ Chí Minh
           </li>
         </ul>
 
@@ -133,18 +131,18 @@
 
     <!-- card other name span 1 -->
     <div
-      class="col-span-4 row-span-2 rounded-25 bg-white shadow-xl"
+      class="col-span-4 row-span-2 rounded-20 bg-white shadow-xl"
       sm="col-span-2"
       lg="col-span-1"
     >
       <div class="h-full flex flex-col p-16 text-center">
-        <h3 class="mt-12 text-25 font-700 capitalize">
+        <h3 class="mt-12 text-20 text-red1 font-700 capitalize">
           Được tài trợ bởi
         </h3>
         <div class="flex-cc flex-grow">
           <img
-            class="w-200 lg:w-80% md:w-300"
-            :src="getImg('bybit-icon.png')"
+            class="w-200 lg:w-70% md:w-250"
+            :src="getImg('bybit-icon-trans.png')"
             alt="bybit logo"
           >
         </div>
@@ -164,6 +162,9 @@ setInterval(() => {
 </script>
 
 <style scoped lang="less">
+.common-rounded {
+  @apply rounded-20;
+}
 .canvas-image {
   @apply absolute right-40 bottom-0;
   height: 90%;
@@ -181,12 +182,12 @@ setInterval(() => {
 }
 
 .folder{
-  @apply rounded-25 relative h-full;
+  @apply rounded-20 relative h-full;
   //filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
   &::before {
     @apply md:content-[''];
-    @apply absolute w-400 h-95 rounded-tl-25;
-    background-color: #eebe05;
+    @apply absolute w-400 h-95 rounded-tl-20;
+    background-color: #faebd7;
     content: none;
     top: -6.3rem;
     right: 0;
