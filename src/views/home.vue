@@ -113,7 +113,7 @@
           <h3 class="cursor-pointer text-30 font-700 hover:text-red1" @click="$router.push({ name: 'Details' })">
             Khóa 03
           </h3>
-          <i class="i-material-symbols-arrow-outward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
+          <i class="i-material-symbols-arrow-forward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
         </div>
         <ul class="pl-16 text-16 font-400">
           <li>TP. Hà Nội</li>
