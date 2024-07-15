@@ -5,7 +5,7 @@
       class="relative col-span-4 row-span-2"
       lg="row-span-4"
     >
-      <div class="folder bg-#d7dbac">
+      <div class="folder bg-yel1">
         <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
           <img
             class="ml-8 h-55"
@@ -13,18 +13,18 @@
             alt="stc logo"
           >
           <AButton
-            class="z-100 mr-30 mt-12 hidden h-50 w-200 text-18 md:block"
+            class="z-100 mr-30 mt-12 hidden h-50 w-200 text-18 font-800 md:block"
             shape="round"
             @click="$router.push({ name: 'Payment' })"
           >
             Đăng ký ngay
           </AButton>
         </div>
-        <div class="h-full flex p-16">
+        <div class="h-full flex p-32">
           <!-- Slogan -->
           <div
             class="z-10 min-h-350 flex-1 text-center text-40 font-900"
-            md="text-left md:text-5.5vw"
+            md="text-left ml-50px md:text-5.5vw"
             lg="text-70"
           >
             <TransitionGroup
@@ -37,7 +37,9 @@
                 v-show="!display"
                 key="1"
               >
-                <p>Đừng FOMO</p>
+                <p class="text-red1">
+                  Đừng FOMO
+                </p>
                 <p>
                   Đầu tư hiệu quả <span class="block">bằng kiến thức</span>
                 </p>
@@ -54,7 +56,7 @@
               </li>
             </TransitionGroup>
 
-            <div class="absolute bottom-30 left-30 z-120 flex gap-16 lg:bottom-120">
+            <div class="absolute bottom-30 left-30 z-120 flex gap-16 lg:bottom-120 md:left-80">
               <AButton
                 class="h-50 w-200 text-18"
                 shape="round"
@@ -124,7 +126,7 @@
 
         <div class="mt-12 flex items-center gap-8">
           <AAvatar :size="35" :src="getImg('avatar-mr-dong.png')" />
-          <span class="text-16 font-500">Đông Phạm</span>
+          <span class="text-16 text-gray font-500">Đông Phạm</span>
         </div>
       </div>
     </div>
@@ -169,7 +171,6 @@ setInterval(() => {
   background-image: url("../assets/images/111-Photoroom.png");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .8;
 }
 
 .main-warp {
@@ -185,7 +186,7 @@ setInterval(() => {
   &::before {
     @apply md:content-[''];
     @apply absolute w-400 h-95 rounded-tl-25;
-    background-color: #d7dbac;
+    background-color: #eebe05;
     content: none;
     top: -6.3rem;
     right: 0;
