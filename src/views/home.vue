@@ -6,12 +6,16 @@
       lg="row-span-4"
     >
       <div class="folder bg-gray">
-        <div class="flex-bc absolute top--60 hidden h-65 w-full md:flex">
-          <div>contentnlogo</div>
+        <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
+          <img
+            class="ml-8 h-55"
+            :src="getImg('stc-logo.png')"
+            alt="stc logo"
+          >
           <AButton
-            class="z-100 mr-30 mt-12 h-45 w-200 text-18"
+            class="z-100 mr-30 mt-12 hidden h-50 w-200 text-18 md:block"
             shape="round"
-            @click="$router.push({ name: 'Details' })"
+            @click="$router.push({ name: 'Payment' })"
           >
             Đăng ký ngay
           </AButton>
@@ -26,7 +30,7 @@
             <TransitionGroup
               name="fade"
               tag="ul"
-              class="grid h-full items-center"
+              class="relative grid h-full items-center"
               mode="out-in"
             >
               <li
@@ -45,10 +49,28 @@
               >
                 <p>Chọn dự án chất lượng</p>
                 <p class="inline-block">
-                  đừng chọn số lượng.
+                  Đừng chọn số lượng
                 </p>
               </li>
             </transitiongroup>
+
+            <div class="absolute left-30 z-120 flex gap-16 md:bottom-120">
+              <AButton
+                class="hidden h-50 w-200 text-18 md:block"
+                shape="round"
+                @click="$router.push({ name: 'Details' })"
+              >
+                Thông tin khoá học
+              </AButton>
+
+              <AButton
+                class="hidden h-50 w-200 bg-red1 text-18 text-white md:block"
+                shape="round"
+                @click="$router.push({ name: 'Payment' })"
+              >
+                Ghi danh
+              </AButton>
+            </div>
           </div>
 
           <!-- Image -->
@@ -85,14 +107,20 @@
       sm="col-span-2"
       lg="col-span-1"
     >
-      <div class="p-16">
-        <div class="text-right">
-          <i class="i-material-symbols:arrow-outward-rounded cursor-pointer text-40 text-red1" />
+      <div class="h-full p-32">
+        <div class="flex items-center justify-between">
+          <i class="i-mdi:arrow-right-drop-circle cursor-pointer text-60 text-red1" />
+          <AAvatar :size="60">
+            Avatar
+          </AAvatar>
         </div>
-        <ul class="text-25">
-          <li>Thông tin khoá học</li>
-          <li class="uppercase">
-            STC-K03
+
+        <ul class="mt-32 text-25">
+          <li>
+            Gv: <span class="font-600">Đông Phạm</span>
+          </li>
+          <li class="mt-8 text-30 font-700 uppercase">
+            Khoá 03
           </li>
         </ul>
       </div>
@@ -142,7 +170,7 @@ setInterval(() => {
 }
 
 .main-warp {
-  @apply max-w-1400 mx-auto p-16 mt-70;
+  @apply max-w-1400 mx-auto p-16 mt-65;
   @apply grid gap-16 grid-cols-4 md:grid-rows-6;
   min-height: calc(100vh - 12rem);
 }
