@@ -5,7 +5,7 @@
       class="relative col-span-4 row-span-2"
       lg="row-span-4"
     >
-      <div class="folder bg-gray">
+      <div class="folder bg-#d7dbac">
         <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
           <img
             class="ml-8 h-55"
@@ -23,14 +23,14 @@
         <div class="h-full flex p-16">
           <!-- Slogan -->
           <div
-            class="z-10 flex-1 text-center text-40 font-900"
+            class="z-10 min-h-350 flex-1 text-center text-40 font-900"
             md="text-left md:text-5.5vw"
             lg="text-70"
           >
             <TransitionGroup
               name="fade"
               tag="ul"
-              class="relative grid h-full items-center"
+              class="grid h-full items-center"
               mode="out-in"
             >
               <li
@@ -52,11 +52,11 @@
                   Đừng chọn số lượng
                 </p>
               </li>
-            </transitiongroup>
+            </TransitionGroup>
 
-            <div class="absolute left-30 z-120 flex gap-16 md:bottom-120">
+            <div class="absolute bottom-30 left-30 z-120 flex gap-16 lg:bottom-120">
               <AButton
-                class="hidden h-50 w-200 text-18 md:block"
+                class="h-50 w-200 text-18"
                 shape="round"
                 @click="$router.push({ name: 'Details' })"
               >
@@ -64,7 +64,7 @@
               </AButton>
 
               <AButton
-                class="hidden h-50 w-200 bg-red1 text-18 text-white md:block"
+                class="h-50 w-200 bg-red1 text-18 text-white"
                 shape="round"
                 @click="$router.push({ name: 'Payment' })"
               >
@@ -90,7 +90,7 @@
 
     <!-- card video -->
     <div
-      class="col-span-4 row-span-2 h-full rounded-25 shadow-xl"
+      class="col-span-4 row-span-2 h-full min-h-250 rounded-25 shadow-xl"
       lg="col-span-2"
     >
       <div class="mx-auto h-inherit overflow-hidden rounded-25">
@@ -103,26 +103,29 @@
 
     <!-- card course name span 1 -->
     <div
-      class="col-span-4 row-span-2 rounded-25 bg-white shadow-xl"
+      class="col-span-4 row-span-2 overflow-hidden rounded-25 bg-white shadow-xl"
       sm="col-span-2"
       lg="col-span-1"
     >
-      <div class="h-full p-32">
+      <img :src="getImg('course-overview.png')" alt="course details">
+      <div class="grid items-stretch p-8">
         <div class="flex items-center justify-between">
-          <i class="i-mdi:arrow-right-drop-circle cursor-pointer text-60 text-red1" />
-          <AAvatar :size="60">
-            Avatar
-          </AAvatar>
+          <h3 class="text-30 font-700">
+            Khóa 03
+          </h3>
+          <i class="i-mdi:arrow-right-drop-circle cursor-pointer text-50 text-red1" @click="$router.push({ name: 'Details' })" />
         </div>
-
-        <ul class="mt-32 text-25">
-          <li>
-            Gv: <span class="font-600">Đông Phạm</span>
-          </li>
-          <li class="mt-8 text-30 font-700 uppercase">
-            Khoá 03
+        <ul class="text-16 text-yel1 font-500">
+          <li>Hà Nội</li>
+          <li class="mt-4">
+            Tp.Hồ chí minh
           </li>
         </ul>
+
+        <div class="mt-12 flex items-center gap-8">
+          <AAvatar :size="35" :src="getImg('avatar-mr-dong.png')" />
+          <span class="text-16 font-500">Đông Phạm</span>
+        </div>
       </div>
     </div>
 
@@ -133,7 +136,7 @@
       lg="col-span-1"
     >
       <div class="h-full flex flex-col p-16 text-center">
-        <h3 class="mt-12 text-25 capitalize">
+        <h3 class="mt-12 text-25 font-700 capitalize">
           Được tài trợ bởi
         </h3>
         <div class="flex-cc flex-grow">
@@ -171,8 +174,9 @@ setInterval(() => {
 
 .main-warp {
   @apply max-w-1400 mx-auto p-16 mt-65;
-  @apply grid gap-16 grid-cols-4 md:grid-rows-6;
-  min-height: calc(100vh - 12rem);
+  @apply grid gap-16 grid-cols-4 md:(grid-rows-6);
+  min-height: calc(100vh - 70rem);
+
 }
 
 .folder{
@@ -180,7 +184,8 @@ setInterval(() => {
   //filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
   &::before {
     @apply md:content-[''];
-    @apply absolute w-400 h-95 rounded-tl-25 bg-gray;
+    @apply absolute w-400 h-95 rounded-tl-25;
+    background-color: #d7dbac;
     content: none;
     top: -6.3rem;
     right: 0;
