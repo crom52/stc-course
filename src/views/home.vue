@@ -1,31 +1,31 @@
 <template>
   <div class="main-page main-warp">
-    <!-- folder1 span 4 -->
+    <!-- folder1 -->
     <div
       class="col-span-4 row-span-2"
-      md="row-span-4"
+      lg="row-span-4"
     >
       <div class="folder bg-gray">
         <div class="h-full flex p-16">
           <!-- Slogan -->
           <div
-            class="flex-1 text-center"
-            md="text-left"
+            class="z-10 flex-1 text-center text-40 font-900"
+            md="text-left md:text-5.5vw"
+            lg="text-70"
           >
             <TransitionGroup
               name="fade"
               tag="ul"
-              class="mt-16 max-w-60% text-6vw font-900 lg:text-70"
+              class="grid h-full w-full items-center"
               mode="out-in"
             >
               <li
                 v-show="!display"
                 key="1"
-                class="text-highlight"
               >
-                <p>Đừng FOMO.</p>
+                <p>Đừng FOMO</p>
                 <p>
-                  Đầu tư hiệu quả bằng kiến thức.
+                  Đầu tư hiệu quả <span class="inline-block">bằng kiến thức</span>
                 </p>
               </li>
 
@@ -46,52 +46,72 @@
             class="hidden"
             md="block flex-basis-1/5"
           >
-            Image
+            <canvas
+              class="canvas-image"
+              width="300"
+              height="500"
+            />
           </div>
         </div>
       </div>
     </div>
 
-    <!-- card video span 2 -->
     <div
-      class="col-span-4 row-span-2 rounded-25 bg-white text-red shadow-xl"
-      md="col-span-2"
+      class="col-span-4 row-span-2 h-full rounded-25 shadow-xl"
+      lg="col-span-2"
     >
-      <div class="h-full p-16">
-        <div class="mx-auto h-inherit overflow-hidden rounded-10">
-          <iframe
-            class="h-inherit w-full"
-            src="https://www.youtube.com/embed/mMUYSM9daF4"
-          />
-        </div>
+      <div class="mx-auto h-inherit overflow-hidden rounded-25">
+        <iframe
+          class="h-inherit w-full"
+          src="https://www.youtube.com/embed/mMUYSM9daF4"
+        />
       </div>
     </div>
 
     <!-- card course name span 1 -->
     <div
-      class="col-span-2 row-span-2 rounded-25 bg-white text-red shadow-xl"
-      md="col-span-1"
+      class="col-span-4 row-span-2 rounded-25 bg-white shadow-xl"
+      sm="col-span-2"
+      lg="col-span-1"
     >
       <div class="p-16">
-        <h3>hello this is content</h3>
-        <div>hello this is ok</div>
+        <div class="text-right">
+          <i class="i-material-symbols:arrow-outward-rounded cursor-pointer text-40 text-red1" />
+        </div>
+        <ul class="text-25">
+          <li>Thông tin khoá học</li>
+          <li class="uppercase">
+            STC-K03
+          </li>
+        </ul>
       </div>
     </div>
 
     <!-- card other name span 1 -->
     <div
-      class="col-span-2 row-span-2 rounded-25 bg-white text-red shadow-xl"
-      md="col-span-1"
+      class="col-span-4 row-span-2 rounded-25 bg-white shadow-xl"
+      sm="col-span-2"
+      lg="col-span-1"
     >
-      <div class="p-16">
-        <h3>hello this is content</h3>
-        <div>hello this is ok</div>
+      <div class="h-full flex flex-col p-16 text-center">
+        <h3 class="mt-12 text-25 capitalize">
+          Được tài trợ bởi
+        </h3>
+        <div class="flex-cc flex-grow">
+          <img
+            class="w-200 lg:w-80% md:w-300"
+            :src="getImg('bybit-icon.png')"
+            alt="bybit logo"
+          >
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { getImg } from '@/utils/common.util';
+
 const display = ref<boolean>(false);
 
 setInterval(() => {
@@ -100,8 +120,18 @@ setInterval(() => {
 </script>
 
 <style scoped lang="less">
+.canvas-image {
+  @apply absolute right-0 bottom-0;
+  height: 90%;
+
+  background-image: url("../assets/images/111-Photoroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .8;
+}
+
 .main-warp {
-  @apply max-w-1200 mx-auto p-16 mt-60;
+  @apply max-w-1400 mx-auto p-16 mt-60;
   @apply grid gap-16 grid-cols-4 grid-rows-6;
   min-height: calc(100vh - 12rem);
 }
