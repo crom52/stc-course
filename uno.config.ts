@@ -39,7 +39,7 @@ export default defineConfig({
   shortcuts: [
     // Flex
     ['flex-cc', 'flex items-center justify-center'],
-    ['flex-cb', 'flex items-center justify-between'],
+    ['flex-bc', 'flex items-center justify-between'],
     // Grid
     ['grid-cc', 'grid items-center justify-center'],
     // Other

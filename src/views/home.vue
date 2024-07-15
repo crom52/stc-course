@@ -2,10 +2,20 @@
   <div class="main-page main-warp">
     <!-- folder1 -->
     <div
-      class="col-span-4 row-span-2"
+      class="relative col-span-4 row-span-2"
       lg="row-span-4"
     >
       <div class="folder bg-gray">
+        <div class="flex-bc absolute top--60 hidden h-65 w-full md:flex">
+          <div>contentnlogo</div>
+          <AButton
+            class="z-100 mr-30 mt-12 h-45 w-200 text-18"
+            shape="round"
+            @click="$router.push({ name: 'Details' })"
+          >
+            Đăng ký ngay
+          </AButton>
+        </div>
         <div class="h-full flex p-16">
           <!-- Slogan -->
           <div
@@ -132,22 +142,22 @@ setInterval(() => {
 }
 
 .main-warp {
-  @apply max-w-1400 mx-auto p-16 mt-60;
+  @apply max-w-1400 mx-auto p-16 mt-70;
   @apply grid gap-16 grid-cols-4 md:grid-rows-6;
   min-height: calc(100vh - 12rem);
 }
 
 .folder{
   @apply rounded-25 relative h-full;
-  filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
+  //filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
   &::before {
     @apply md:content-[''];
-    @apply absolute w-300 h-60 rounded-tl-25;
+    @apply absolute w-400 h-95 rounded-tl-25 bg-gray;
     content: none;
-    top: -39px;
+    top: -6.3rem;
     right: 0;
-    background: rgb(145, 252, 149);
-    // clip-path: path('M 0 0 L 160 0 C 193 0, 165 53, 245 43 L 0 60 z');
+    clip-path: path('M 0 0 L 205 0 C 300 0, 235 81, 429 63 L 0 90 z');
+    transform: scaleX(-1); /* Adjust the angle as needed */
 
   }
 }
