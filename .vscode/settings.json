@@ -3,7 +3,7 @@
   "editor.tabSize": 2,
   "iconify.inplace": false,
   "less.lint.unknownAtRules": "ignore",
-
+  "files.encoding": "utf8",
   // format on save
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
@@ -18,7 +18,7 @@
   "vue.autoInsert.dotValue": true,
   "explorer.copyRelativePathSeparator": "/",
   "workbench.colorCustomizations": {
-    "minimap.infoHighlight": "#1e1e1e"
+    "minimap.infoHighlight": "#00000000"
   },
   "search.exclude": {
     "**/node_modules": true,

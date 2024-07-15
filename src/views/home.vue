@@ -1,166 +1,151 @@
 <template>
-  <div class="main-page relative">
-    <div class="banner-warp sticky top-0 h-72">
-      <div class="h-full flex items-center justify-center text-center">
-        <ul class="px-12 text-16 md:text-18">
-          <li class="text-110% text-gr1">
-            Giảm giá lên tới 25%
-          </li>
-          <li class="text-80%">
-            <span>Thông qua đăng ký tài khoản dưới ref của STC </span> <span class="inline-block">và mời nhóm bạn cùng tham gia khóa học</span>  
-          </li>
-        </ul>
+  <div class="main-page main-warp">
+    <!-- folder1 -->
+    <div
+      class="relative col-span-4 row-span-2"
+      lg="row-span-4"
+    >
+      <div class="folder bg-#faebd7">
+        <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
+          <img
+            class="ml-8 h-55"
+            :src="getImg('stc-logo.png')"
+            alt="stc logo"
+          >
+          <AButton
+            class="z-100 mr-30 mt-12 hidden h-50 w-200 bg-red1 text-18 text-white font-800 md:block"
+            shape="round"
+            @click="$router.push({ name: 'Payment' })"
+          >
+            Đăng ký ngay
+          </AButton>
+        </div>
+        <div class="h-full flex p-32">
+          <!-- Slogan -->
+          <div
+            class="z-10 min-h-450 flex-1 text-center text-40 font-900"
+            md="text-left ml-50px md:text-5.5vw"
+            lg="text-70"
+          >
+            <TransitionGroup
+              name="fade"
+              tag="ul"
+              class="grid h-full items-center"
+              mode="out-in"
+            >
+              <li
+                v-show="!display"
+                key="1"
+              >
+                <p class="text-red1">
+                  Đừng FOMO
+                </p>
+                <p>
+                  Đầu tư hiệu quả <span class="block">bằng kiến thức</span>
+                </p>
+              </li>
 
-        <AButton
-          class="hidden md:block h-40 text-17 font-600 bg-gr1 b !b-white min-w-150"
-          hover="!text-black bg-white"
-          @click="$router.push({ name: 'Payment' })"
-        >
-          Đăng ký ngay
-        </AButton>
+              <li
+                v-show="display"
+                key="2"
+              >
+                <p>Chọn dự án chất lượng</p>
+                <p class="inline-block">
+                  Đừng chọn số lượng
+                </p>
+              </li>
+            </TransitionGroup>
+
+            <div class="absolute bottom-30 left-16 right-16 z-120 grid items-stretch gap-8 lg:bottom-100 md:(left-80 flex)">
+              <AButton
+                class="h-50 text-18 md:w-200"
+                @click="$router.push({ name: 'Details' })"
+              >
+                Thông tin khoá học
+              </AButton>
+
+              <AButton
+                class="h-50 bg-red1 text-18 text-white md:w-200"
+                @click="$router.push({ name: 'Payment' })"
+              >
+                Ghi danh
+              </AButton>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div
+            class="hidden"
+            md="block flex-basis-1/5"
+          >
+            <canvas
+              class="canvas-image"
+              width="300"
+              height="500"
+            />
+          </div>
+        </div>
       </div>
     </div>
-    <div class="grid mx-auto max-w-1200 px-16 text-center">
-      <!-- Slogan -->
-      <h3
-        class="mt-7% text-30 font-800"
-        md="text-35"
-        lg="text-50"
-      >
-        Đừng FOMO.
-        <br>
-        Đầu tư hiệu quả bằng kiến thức.
-      </h3>
 
-      <p
-        class="mt-16 text-18 text-cgray font-500"
-        md="text-25"
-        lg="text-30"
-      >
-        Chọn dự án chất lượng đừng chọn số lượng.
-      </p>
-
-      <!-- Register Button -->
-      <div
-        class="grid grid-cols-1 mt-50 items-center justify-center gap-16"
-        sm="flex"
-      >
-        <AButton
-          type="primary"
-          class="btn-course bggar"
-          @click="$router.push({ name: 'Details' })"
-        >
-          Thông tin khoá học
-        </AButton>
-
-        <AButton
-          class="btn-course"
-          @click="$router.push({ name: 'Payment' })"
-        >
-          Ghi danh
-        </AButton>
+    <!-- card video -->
+    <div
+      class="col-span-4 row-span-2 h-full min-h-250 rounded-20 shadow-xl"
+      lg="col-span-2"
+    >
+      <div class="mx-auto h-inherit overflow-hidden rounded-20">
+        <iframe
+          class="h-inherit w-full"
+          src="https://www.youtube.com/embed/mMUYSM9daF4"
+        />
       </div>
+    </div>
 
-      <!--  Sponsor -->
-      <div class="mt-32 rounded-10 md:mt-65">
-        <p class="text-15 text-highlight font-400 font-mono uppercase">
-          Được tài trợ bởi
-        </p>
-
-        <ul class="mt-32 flex flex-wrap justify-center gap-25">
-          <li
-            v-for="sponsor in sponsors"
-            :key="sponsor.name"
-            class="proposal-highlight"
-          >
-            <img
-              :src="getImg(sponsor.imgName)"
-              loading="lazy"
-              decoding="async"
-              :alt="sponsor.name"
-              class="w-50 md:w-70"
-            >
+    <!-- card course name span 1 -->
+    <div
+      class="col-span-4 row-span-2 overflow-hidden rounded-20 bg-white shadow-xl"
+      sm="col-span-2"
+      lg="col-span-1"
+    >
+      <img :src="getImg('course-overview2.png')" alt="course details">
+      <div class="grid items-stretch p-8">
+        <div class="flex items-center justify-between">
+          <h3 class="cursor-pointer text-30 font-700 hover:text-red1" @click="$router.push({ name: 'Details' })">
+            Khóa 03
+          </h3>
+          <i class="i-material-symbols-arrow-forward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
+        </div>
+        <ul class="pl-16 text-16 font-400">
+          <li>TP. Hà Nội</li>
+          <li class="mt-4">
+            TP. Hồ Chí Minh
           </li>
         </ul>
+
+        <div class="mt-12 flex items-center gap-8">
+          <AAvatar :size="35" :src="getImg('avatar-mr-dong.png')" />
+          <span class="text-16 text-gray font-500">Đông Phạm</span>
+        </div>
       </div>
+    </div>
 
-      <!-- Carousel -->
-      <div class="relative mt-42 overflow-hidden rounded-10 md:mt-75">
-        <ACarousel :autoplay="true">
-          <div
-            id="carousel-warp"
-            class="h-full"
+    <!-- card other name span 1 -->
+    <div
+      class="col-span-4 row-span-2 rounded-20 bg-white shadow-xl"
+      sm="col-span-2"
+      lg="col-span-1"
+    >
+      <div class="h-full flex flex-col p-16 text-center">
+        <h3 class="mt-12 text-20 text-red1 font-700 capitalize">
+          Được tài trợ bởi
+        </h3>
+        <div class="flex-cc flex-grow">
+          <img
+            class="w-200 lg:w-70% md:w-250"
+            :src="getImg('bybit-icon-trans.png')"
+            alt="bybit logo"
           >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
-                <img
-                  :src="getImg('mrDong1.jpg')"
-                  alt="Dong Pham"
-                  class="mx-auto h-full"
-                >
-              </div>
-              <div>
-                <h3 class="mt-10% tgar2 text-30">
-                  Xây dựng nền tảng
-                </h3>
-                <ul class="mt-16 text-20 font-mono">
-                  <li>Tạo dựng nền tảng </li>
-                  <li class="capitalize">lý thuyết, kiến thức</li>
-                  <li>Vững vàng</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div
-            id="carousel-warp"
-            class="h-full"
-          >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
-                <img
-                  :src="getImg('mrDong2.jpg')"
-                  alt="Dong Pham"
-                  class="mx-auto h-full"
-                >
-              </div>
-              <div>
-                <h3 class="mt-10% tgar2 text-30">
-                  Phát triển chiến lược
-                </h3>
-                <ul class="mt-16 text-20 font-mono">
-                  <li>Vận dụng tài nguyên</li>
-                  <li>Phát triển chiến lược</li>
-                  <li class="capitalize">chặt chẽ, linh hoạt</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div
-            id="carousel-warp"
-            class="h-full"
-          >
-            <div class="grid md:grid-cols-2 h-full">
-              <div class="h-full overflow-hidden rounded-10 hidden md:block bg-black">
-                <img
-                  :src="getImg('mrDong3.jpg')"
-                  alt="Dong Pham"
-                  class="mx-auto h-full"
-                >
-              </div>
-              <div>
-                <h3 class="mt-10% tgar2 text-30">
-                  Tối ưu tiềm năng
-                </h3>
-                <ul class="mt-16 text-20 font-mono">
-                  <li>Nhận biết cơ hội</li>
-                  <li>Tối đa hóa lợi nhuận</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </ACarousel>
+        </div>
       </div>
     </div>
   </div>
@@ -169,43 +154,46 @@
 <script lang="ts" setup>
 import { getImg } from '@/utils/common.util';
 
-const sponsors = [
-  {
-    name: 'bybit',
-    imgName: 'bybit-final2.png',
-  },
-];
+const display = ref<boolean>(false);
+
+setInterval(() => {
+  display.value = !display.value;
+}, 2000);
 </script>
 
 <style scoped lang="less">
-.banner-warp {
-  background-image: url('../assets//images/offer-background.jpg');
+.common-rounded {
+  @apply rounded-20;
+}
+.canvas-image {
+  @apply absolute right-40 bottom--32;
+  height: 100%;
+
+  background-image: url("../assets/images/111-Photoroom.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.proposal-highlight {
-  position: relative;
-  &::after {
-    content: "";
-    z-index: -1;
-    bottom: -7px;
-    opacity: .8;
-    left: -2px;
-    @apply absolute rounded-3/2 w-full h-1/2 shadow-lg shadow-gray;
-  }
+.main-warp {
+  @apply max-w-1400 mx-auto p-16 mt-65;
+  @apply grid gap-16 grid-cols-4 md:(grid-rows-6);
+  min-height: calc(100vh - 70rem);
+
 }
 
-.btn-course {
-  @apply h-50 text-20 font-600 min-w-200;
-}
+.folder{
+  @apply rounded-20 relative h-full;
+  //filter: drop-shadow(0 0 0.75rem grey); // TODO: research it
+  &::before {
+    @apply md:content-[''];
+    @apply absolute w-400 h-95 rounded-tl-20;
+    background-color: #faebd7;
+    content: none;
+    top: -6.3rem;
+    right: 0;
+    clip-path: path('M 0 0 L 205 0 C 300 0, 235 81, 429 63 L 0 90 z');
+    transform: scaleX(-1); /* Adjust the angle as needed */
 
-:deep(.slick-slide) {
-  @apply h-350 overflow-hidden text-white p-26 ;
-  @apply bg-cover;
-  background-image: url("../assets/images/bg-card3.jpg");
-  div:has(#carousel-warp) {
-    @apply h-full;
   }
 }
 </style>
