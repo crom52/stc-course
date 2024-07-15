@@ -166,11 +166,11 @@ setInterval(() => {
   @apply rounded-20;
 }
 .canvas-image {
-  @apply absolute right-40 bottom-0;
-  height: 90%;
+  @apply absolute right-40 bottom--32;
+  height: 100%;
 
   background-image: url("../assets/images/111-Photoroom.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
