@@ -16,7 +16,7 @@
             <TransitionGroup
               name="fade"
               tag="ul"
-              class="grid h-full w-full items-center"
+              class="grid h-full items-center"
               mode="out-in"
             >
               <li
@@ -25,7 +25,7 @@
               >
                 <p>Đừng FOMO</p>
                 <p>
-                  Đầu tư hiệu quả <span class="inline-block">bằng kiến thức</span>
+                  Đầu tư hiệu quả <span class="block">bằng kiến thức</span>
                 </p>
               </li>
 
@@ -56,6 +56,7 @@
       </div>
     </div>
 
+    <!-- card video -->
     <div
       class="col-span-4 row-span-2 h-full rounded-25 shadow-xl"
       lg="col-span-2"
@@ -121,7 +122,7 @@ setInterval(() => {
 
 <style scoped lang="less">
 .canvas-image {
-  @apply absolute right-0 bottom-0;
+  @apply absolute right-40 bottom-0;
   height: 90%;
 
   background-image: url("../assets/images/111-Photoroom.png");
@@ -132,7 +133,7 @@ setInterval(() => {
 
 .main-warp {
   @apply max-w-1400 mx-auto p-16 mt-60;
-  @apply grid gap-16 grid-cols-4 grid-rows-6;
+  @apply grid gap-16 grid-cols-4 md:grid-rows-6;
   min-height: calc(100vh - 12rem);
 }
 
