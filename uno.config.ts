@@ -24,6 +24,7 @@ export default defineConfig({
   theme: {
     colors: {
       abg: '#f6f9fc', // app background
+      abd: '#dedede',
       red1: '#b82a2f',
       yel1: '#eebe05',
     },
