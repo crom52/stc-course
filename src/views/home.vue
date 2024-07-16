@@ -165,6 +165,7 @@ setInterval(() => {
 .common-rounded {
   @apply rounded-20;
 }
+
 .canvas-image {
   @apply absolute right-40 bottom--32;
   height: 100%;
@@ -178,7 +179,6 @@ setInterval(() => {
   @apply max-w-1400 mx-auto p-16 mt-65;
   @apply grid gap-16 grid-cols-4 md:(grid-rows-6);
   min-height: calc(100vh - 70rem);
-
 }
 
 .folder{
