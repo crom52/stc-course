@@ -18,6 +18,7 @@ const seedTokenGlobalConfig: ThemeConfig = {
     colorPrimary: '#eebe05',
     fontFamily: 'Signika, sans-serif',
     borderRadius: 15,
+    fontSize: 16,
   },
 };
 </script>

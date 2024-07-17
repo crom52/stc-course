@@ -1,70 +1,131 @@
 <template>
   <div class="text-16">
-    <h3 class="card-title">
-      Thông tin thanh toán
-    </h3>
-    <div class="card-warp">
-      <div>
-        <div class="flex-bc flex-wrap font-600">
-          <p class="text-gray">
-            Tổng học phí:
-          </p>
-          <p class="text-18 text-green">
-            {{ formatVND(BASE_PRICE) }}
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="card-title mt-32">
-      Thông tin chuyển khoản
-    </h3>
-    <div class="card-warp">
-      <h6 class="bank-highlight">
-        Chuyển khoản ngân hàng Việt Nam
-      </h6>
-
-      <!-- info -->
-      <div class="grid mt-16 gap-8 font-500">
-        <template v-for="item in bankInfo" :key="item.key">
-          <template v-if="item.key !== 'payment-content'">
-            <div class="flex-bc flex-wrap">
-              <p class="min-w-300 text-gray">
-                {{ item.title }}
-              </p>
-              <CopyableText
-                :copyContent="item.copyContent || ''"
-                showIcon
-                class="cursor-pointer whitespace-nowrap"
-              >
-                {{ item.displayContent }}
-              </CopyableText>
-            </div>
-          </template>
-
-          <template v-else>
-            <div class="flex flex-wrap justify-between">
-              <p class="min-w-300 text-gray">
-                {{ item.title }}
-              </p>
-              <ul class="whitespace-nowrap text-right">
-                <li>STCK03 - <span class="text-yel1 font-400 font-italic">SĐT của bạn</span></li>
-                <li class="text-12 text-gray">
-                  Ví dụ: STCK03 - 0901020304
-                </li>
-              </ul>
-            </div>
-          </template>
+    <ASteps
+      :current="currentStep"
+      direction="vertical"
+      :responsive="false"
+      @change="onStepChangedByClick"
+    >
+      <AStep disabled>
+        <template #title>
+          Xác nhận học phí
         </template>
-      </div>
-    </div>
+        <template #description>
+          <div class="card-warp">
+            <div class="flex-bc flex-wrap font-600">
+              <p class="text-gray">
+                Tổng học phí:
+              </p>
+              <p class="text-18 text-green">
+                {{ formatVND(BASE_PRICE) }}
+              </p>
+            </div>
+          </div>
+        </template>
+      </AStep>
+
+      <AStep disabled>
+        <template #title>
+          Thông tin thanh toán và chuyển khoản
+        </template>
+        <template #description>
+          <div class="card-warp flex gap-16">
+            <div class="flex-1">
+              <h6 class="bank-highlight">
+                Chuyển khoản ngân hàng Việt Nam
+              </h6>
+
+              <!-- info -->
+              <div class="grid mt-16 flex-1 gap-8 font-500">
+                <template v-for="item in bankInfo" :key="item.key">
+                  <template v-if="item.key !== 'payment-content'">
+                    <div class="flex-bc flex-wrap">
+                      <p class="min-w-150 text-gray">
+                        {{ item.title }}
+                      </p>
+                      <CopyableText
+                        :copyContent="item.copyContent || ''"
+                        showIcon
+                        class="cursor-pointer whitespace-nowrap"
+                      >
+                        {{ item.displayContent }}
+                      </CopyableText>
+                    </div>
+                  </template>
+
+                  <template v-else>
+                    <div class="flex flex-wrap justify-between">
+                      <p class="min-w-150 text-gray">
+                        {{ item.title }}
+                      </p>
+                      <ul class="whitespace-nowrap text-right">
+                        <li>STCK03 - <span class="text-yel1 font-400 font-italic">SĐT của bạn</span></li>
+                        <li class="text-12 text-gray">
+                          Ví dụ: STCK03 - 0901020304
+                        </li>
+                      </ul>
+                    </div>
+                  </template>
+                </template>
+              </div>
+
+              <!-- confirm -->
+              <p class="mt-32">
+                <i class="i-iconamoon:information-circle-fill text-blue-5" />
+                <span class="text-gray-5">
+                  Chụp lại màn hình chuyển khoản để xác nhận thanh toán
+                </span>
+              </p>
+
+              <div class="mt-16">
+                <ACheckbox :checked="isTransferred" @update:checked="onCheckTransferred">
+                  Tôi đã chuyển khoản thành công!
+                </ACheckbox>
+              </div>
+            </div>
+            <div class="hidden flex-1 b-l-2 b-abd md:block">
+              <div class="mx-auto h-400 w-fit overflow-hidden rounded-20">
+                <img
+                  class="h-full"
+                  :src="getImg('payment-qr.jpg')"
+                  alt="qr payment"
+                >
+              </div>
+            </div>
+          </div>
+        </template>
+      </AStep>
+      <AStep>
+        <template #title>
+          <div :class="{ 'text-green': isTransferred }">
+            Xác nhận thanh toán  <i class="i-lets-icons:done-ring-round" />
+          </div>
+        </template>
+        <template #description>
+          <div
+            v-if="isTransferred"
+            class="cursor-pointer text-blue hover:underline"
+            @click="onClickRedirectToPaymentForm"
+          >
+            Điều hướng đến Form xác nhận thanh toán  <i
+              class="i-material-symbols:arrow-outward-rounded"
+            />
+          </div>
+        </template>
+      </AStep>
+    </ASteps>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { formatVND } from '@/utils/common.util';
+import { Modal, message } from 'ant-design-vue';
+import { createVNode } from 'vue';
+import { QuestionCircleFilled } from '@ant-design/icons-vue';
+import { formatVND, getImg } from '@/utils/common.util';
 
 const BASE_PRICE = 25000000;
+const currentStep = ref<number>(1);
+const isTransferred = ref<boolean>(false);
 
 const bankInfo = [
   {
@@ -96,6 +157,42 @@ const bankInfo = [
     title: 'Nội dung chuyển khoản',
   },
 ];
+
+function onCheckTransferred(isChecked: boolean) {
+  if (!isChecked) {
+    currentStep.value = 1;
+    isTransferred.value = false;
+
+    return;
+  }
+
+  Modal.confirm({
+    title: 'Xác nhận thanh toán!',
+    icon: createVNode(QuestionCircleFilled),
+    content: 'Bạn đã chuyển khoản thành công và chụp lại màn hình chuyển khoản?',
+    okText: 'Xác nhận',
+    cancelText: 'Quay lại',
+    onOk() {
+      isTransferred.value = true;
+      currentStep.value = 2;
+    },
+  });
+}
+
+function onStepChangedByClick(step: number) {
+  if (step === 2 && !isTransferred.value)
+    message.warning({ content: 'Bạn phải xác nhận thanh toán trước khi chuyển đến bước này', duration: 2 });
+};
+
+function onClickRedirectToPaymentForm() {
+  if (!isTransferred.value)
+    return;
+  try {
+    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank')?.focus();
+  } catch (e) {
+    console.error('cannot redirect');
+  }
+};
 </script>
 
 <style scoped lang="less">
@@ -109,7 +206,7 @@ const bankInfo = [
   }
 }
 .card-title {
-  @apply font-700 text-18 mb-8;
+  @apply font-700 text-18 mb-8 text-gray-6;
 }
 
 .card-warp {

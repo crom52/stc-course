@@ -1,5 +1,5 @@
 <template>
-  <div class="main-page font-page mx-auto max-w-1400 px-16">
+  <div class="main-page font-page mx-auto max-w-1000 px-16">
     <div class="tag-container">
       <ATabs v-model:activeKey="activeKey">
         <!-- Tab1 -->
