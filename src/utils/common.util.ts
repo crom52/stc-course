@@ -12,3 +12,11 @@ export const getImg = (imgName: string) => {
 };
 
 export const uniqueSlash = (path: string) => path.replace(/(https?:\/)|(\/)+/g, '$1$2');
+
+export const formatVND = (value: number | string) => {
+  const num = +value;
+  if (+num === 0)
+    return '';
+
+  return num.toLocaleString('en-US', { style: 'currency', currency: 'VND' });
+};
