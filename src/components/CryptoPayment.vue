@@ -30,7 +30,7 @@
         </template>
         <template #description>
           <div class="card-warp">
-            <h6 class="bank-highlight">
+            <h6 class="bank-highlight text-gray-5">
               Link thanh toán Copperx
             </h6>
             <div class="pl-16">
@@ -43,7 +43,7 @@
               </a>
             </div>
 
-            <h6 class="bank-highlight mt-32">
+            <h6 class="bank-highlight mt-32 text-gray-5">
               Donate trực tiếp vào địa chỉ ví
             </h6>
             <div class="pl-16">
