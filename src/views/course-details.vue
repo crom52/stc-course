@@ -1,5 +1,5 @@
 <template>
-  <div class="main-page details-page mx-auto mt-16 max-w-700">
+  <div class="main-page details-page mx-auto mt-16 max-w-700 px-32">
     <div class="grid items-center justify-center gap-16 text-center">
       <h3 class="text-highlight mt-16 text-25 font-900">
         Khoá học Blockchain Toàn diện, <span class="inline-block">Chuyên sâu từ Cơ bản đến Nâng cao</span>
