@@ -192,7 +192,7 @@ setInterval(() => {
     top: -6.3rem;
     right: 0;
     clip-path: path('M 0 0 L 205 0 C 300 0, 235 81, 429 63 L 0 90 z');
-    transform: scaleX(-1); /* Adjust the angle as needed */
+    transform: scaleX(-1); /* Adjust the angle as */
 
   }
 }
