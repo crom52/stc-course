@@ -3,7 +3,7 @@
   <component
     :is="tag || 'p'"
     v-bind="$attrs"
-    @click="onClickCopyHandler('text')"
+    @click="onClickCopyHandler()"
   >
     <slot>
       {{ copyContent }}
@@ -27,7 +27,6 @@ const props = defineProps<{
 }>();
 
 type HTMLName = 'ul' | 'span';
-type CopyType = 'text' | 'icon';
 
 const {
   copyContent,
@@ -50,7 +49,7 @@ async function handleCopy() {
   }
 }
 
-const onClickCopyHandler = async (type: CopyType) => {
+const onClickCopyHandler = async () => {
   handleCopy();
 };
 </script>
