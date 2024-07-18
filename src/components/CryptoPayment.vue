@@ -30,20 +30,7 @@
         </template>
         <template #description>
           <div class="card-warp">
-            <h6 class="bank-highlight text-gray-5">
-              Link thanh toán Copperx
-            </h6>
-            <div class="pl-16">
-              <a
-                class="cursor-pointer text-yel1 font-300 hover:underline"
-                href="https://buy.copperx.io/payment/checkout-session/768d05f8-254c-4326-8538-9d1df1944f60"
-                target="_blank"
-              >
-                https://buy.copperx.io/payment/checkout-session/768d05f8-254c-4326-8538-9d1df1944f60
-              </a>
-            </div>
-
-            <h6 class="bank-highlight mt-32 text-gray-5">
+            <h6 class="bank-highlight text-gray-6">
               Donate trực tiếp vào địa chỉ ví
             </h6>
             <div class="pl-16">
@@ -52,6 +39,19 @@
                 showIcon
                 class="cursor-pointer hover:text-yel1"
               />
+            </div>
+
+            <h6 class="bank-highlight mt-32 text-gray-6">
+              Link donate Copperx
+            </h6>
+            <div class="pl-16">
+              <a
+                class="cursor-pointer text-blue-5 font-300 hover:underline"
+                href="https://buy.copperx.io/payment/payment-link/a4d5cf71-986f-4dc1-8b24-2df63df8bc35"
+                target="_blank"
+              >
+                https://buy.copperx.io/payment/payment-link/a4d5cf71-986f-4dc1-8b24-2df63df8bc35
+              </a>
             </div>
           </div>
         </template>
