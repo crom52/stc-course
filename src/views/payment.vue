@@ -39,6 +39,7 @@ const seedTokenGlobalConfig: ThemeConfig = {
   token: {
     fontFamily: 'Roboto, sans-serif',
     fontSize: 16,
+    borderRadius: 10,
   },
 };
 
