@@ -123,18 +123,12 @@
                 </div>
 
                 <!-- confirm -->
-                <p class="mt-32">
+                <p class="mt-32 md:mt-90">
                   <i class="i-iconamoon:information-circle-fill text-blue-5" />
                   <span class="text-gray-5">
                     Chụp lại màn hình chuyển khoản để xác nhận thanh toán
                   </span>
                 </p>
-
-                <div class="mt-16">
-                  <ACheckbox :checked="isTransferred" @update:checked="onCheckTransferred">
-                    Tôi đã chuyển khoản thành công!
-                  </ACheckbox>
-                </div>
               </div>
               <div class="hidden flex-1 b-l-2 b-abd md:block">
                 <div class="mx-auto h-400 w-fit overflow-hidden rounded-20">
@@ -155,13 +149,13 @@
 
       <AStep>
         <template #title>
-          <div class="font-700" :class="{ 'text-green': isTransferred }">
+          <div class="font-700" :class="{ 'text-green': currentStepKey > 0 }">
             Xác nhận thanh toán  <i class="i-lets-icons:done-ring-round" />
           </div>
         </template>
         <template #description>
           <div
-            v-if="isTransferred"
+            v-if="currentStepKey > 0"
             class="cursor-pointer text-blue hover:underline"
             @click="onClickRedirectToPaymentGoogleForm"
           >
@@ -178,9 +172,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Modal, message } from 'ant-design-vue';
-import { createVNode } from 'vue';
-import { QuestionCircleFilled } from '@ant-design/icons-vue';
 import type { FormInstance } from 'ant-design-vue';
 import type { Rule } from 'ant-design-vue/es/form';
 import { formatVND, getImg } from '@/utils/common.util';
@@ -188,7 +179,6 @@ import { formatVND, getImg } from '@/utils/common.util';
 const BASE_PRICE = 25000000;
 
 const currentStepKey = ref<number>(0);
-const isTransferred = ref<boolean>(false);
 
 const formRef = ref<FormInstance>();
 
@@ -234,37 +224,15 @@ const bankInfo = [
   },
 ];
 
-function onCheckTransferred(isChecked: boolean) {
-  if (!isChecked) {
-    currentStepKey.value = 1;
-    isTransferred.value = false;
-
-    return;
-  }
-
-  Modal.confirm({
-    title: 'Xác nhận thanh toán!',
-    icon: createVNode(QuestionCircleFilled),
-    content: 'Bạn đã chuyển khoản thành công và chụp lại màn hình chuyển khoản?',
-    okText: 'Xác nhận',
-    cancelText: 'Quay lại',
-    onOk() {
-      isTransferred.value = true;
-      currentStepKey.value = 2;
-    },
-  });
-}
-
 function onStepChangedByClick(step: number) {
-  if (step === 2 && !isTransferred.value)
-    message.warning({ content: 'Bạn phải xác nhận thanh toán trước khi chuyển đến bước này', duration: 2 });
+  if (!(currentStepKey.value === 1 && step === 2))
+    return;
+  currentStepKey.value = step;
 };
 
 function onClickRedirectToPaymentGoogleForm() {
-  if (!isTransferred.value)
-    return;
   try {
-    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank')?.focus();
+    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank');
   } catch (e) {
     console.error('cannot redirect');
   }
