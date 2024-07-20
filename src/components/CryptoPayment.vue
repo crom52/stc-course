@@ -30,15 +30,22 @@
         <template #description>
           <div class="card-warp">
             <h6 class="bank-highlight text-gray-6">
-              Donate trực tiếp vào địa chỉ ví
+              Donate trực tiếp <span class="text-red1">USDT, USDC</span> vào địa chỉ ví
             </h6>
             <div class="pl-16">
               <CopyableText
                 copyContent="0x0268Cdc83FDb61755215EC044A676140913389dc"
                 showIcon
                 class="cursor-pointer hover:text-yel1"
-              />
+              >
+                <ATooltip title="0x0268Cdc83FDb61755215EC044A676140913389dc">
+                  0x0268C...13389dc
+                </ATooltip>
+              </CopyableText>
             </div>
+            <p class="mt-4 pl-16 text-14">
+              Mạng: <span class="font-600">ERC20</span> / <span class="font-600">Arbitrum One</span> / <span class="font-600">Base</span> / <span class="font-600">BEP20</span>
+            </p>
 
             <h6 class="bank-highlight mt-32 text-gray-6">
               Link donate Copperx
@@ -63,7 +70,7 @@
           </div>
         </template>
         <template #description>
-          <div class="cursor-pointer text-blue hover:underline">
+          <div class="cursor-pointer text-blue hover:underline" @click="onClickRedirectToPaymentGoogleForm">
             Điều hướng đến Form xác nhận thanh toán
             <i class="i-material-symbols:arrow-outward-rounded" />
           </div>
@@ -76,6 +83,14 @@
 <script lang="ts" setup>
 const BASE_PRICE = 999;
 const currentStep = ref<number>(1);
+
+function onClickRedirectToPaymentGoogleForm() {
+  try {
+    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank');
+  } catch (e) {
+    console.error('cannot redirect');
+  }
+};
 </script>
 
 <style scoped lang="less">

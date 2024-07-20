@@ -18,6 +18,7 @@ declare module 'vue' {
     ASteps: typeof import('ant-design-vue/es')['Steps']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    ATooltip: typeof import('ant-design-vue/es')['Tooltip']
     BankPayment: typeof import('./../src/components/BankPayment.vue')['default']
     CopyableText: typeof import('./../src/components/CopyableText.vue')['default']
     CryptoPayment: typeof import('./../src/components/CryptoPayment.vue')['default']

@@ -105,9 +105,9 @@
                 </div>
 
                 <!-- confirm -->
-                <p class="mt-32 md:mt-90">
+                <p class="mt-32 md:mt-50">
                   <i class="i-iconamoon:information-circle-fill text-blue-5" />
-                  <span class="text-14 text-gray-5">
+                  <span class="text-14 text-red1 font-600">
                     Chụp lại màn hình chuyển khoản để xác nhận thanh toán
                   </span>
                 </p>
@@ -122,10 +122,10 @@
                 </div>
               </div>
               <div class="hidden flex-1 b-l-2 b-abd md:block">
-                <div class="mx-auto h-400 w-fit overflow-hidden rounded-20">
+                <div class="mx-auto h-7/8 w-fit overflow-hidden rounded-20">
                   <img
                     class="h-full"
-                    :src="getImg('payment-qr.jpg')"
+                    :src="getImg('qr-25tr.png')"
                     alt="qr payment"
                   >
                 </div>
