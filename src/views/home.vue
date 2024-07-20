@@ -110,15 +110,17 @@
       <img :src="getImg('course-overview2.png')" alt="course details">
       <div class="grid items-stretch p-8">
         <div class="flex items-center justify-between">
-          <h3 class="cursor-pointer text-30 font-700 hover:text-red1" @click="$router.push({ name: 'Details' })">
+          <h3 class="cursor-pointer text-30 text-red1 font-700" @click="$router.push({ name: 'Details' })">
             Khóa 03
           </h3>
           <i class="i-material-symbols-arrow-forward-rounded cursor-pointer text-35 text-red1" @click="$router.push({ name: 'Details' })" />
         </div>
         <ul class="pl-16 text-16 font-400">
-          <li>TP. Hà Nội</li>
+          <li>
+            TP. Hà Nội: <span class="font-700">09-11/8</span>
+          </li>
           <li class="mt-4">
-            TP. Hồ Chí Minh
+            TP. HCM: <span class="font-700">23-25/8</span>
           </li>
         </ul>
 

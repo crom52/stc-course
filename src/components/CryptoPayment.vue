@@ -1,10 +1,9 @@
 <template>
   <div class="text-16">
     <ASteps
-      :current="currentStep"
+      v-model:current="currentStep"
       direction="vertical"
       :responsive="false"
-      @change="onStepChangedByClick"
     >
       <AStep disabled>
         <template #title>
@@ -56,85 +55,27 @@
           </div>
         </template>
       </AStep>
+
+      <AStep>
+        <template #title>
+          <div class="font-700">
+            Xác nhận thanh toán  <i class="i-lets-icons:done-ring-round" />
+          </div>
+        </template>
+        <template #description>
+          <div class="cursor-pointer text-blue hover:underline">
+            Điều hướng đến Form xác nhận thanh toán
+            <i class="i-material-symbols:arrow-outward-rounded" />
+          </div>
+        </template>
+      </AStep>
     </ASteps>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Modal, message } from 'ant-design-vue';
-import { createVNode } from 'vue';
-import { QuestionCircleFilled } from '@ant-design/icons-vue';
-
 const BASE_PRICE = 999;
 const currentStep = ref<number>(1);
-const isTransferred = ref<boolean>(false);
-
-const bankInfo = [
-  {
-    key: 'bank',
-    title: 'Ngân hàng',
-    displayContent: 'Vietcombank',
-    copyContent: 'Vietcombank',
-  },
-  {
-    key: 'bank-id',
-    title: 'Số tài khoản',
-    displayContent: '02 310 0062 6961',
-    copyContent: '0231000626961',
-  },
-  {
-    key: 'bank-account-name',
-    title: 'Tên tài khoản',
-    displayContent: 'NGUYEN MINH PHUC',
-    copyContent: 'NGUYEN MINH PHUC',
-  },
-  {
-    key: 'bank-branch',
-    title: 'Chi nhánh',
-    displayContent: 'Đắk Lắk',
-    copyContent: 'Dak Lak',
-  },
-  {
-    key: 'payment-content',
-    title: 'Nội dung chuyển khoản',
-  },
-];
-
-function onCheckTransferred(isChecked: boolean) {
-  if (!isChecked) {
-    currentStep.value = 1;
-    isTransferred.value = false;
-
-    return;
-  }
-
-  Modal.confirm({
-    title: 'Xác nhận thanh toán!',
-    icon: createVNode(QuestionCircleFilled),
-    content: 'Bạn đã chuyển khoản thành công và chụp lại màn hình chuyển khoản?',
-    okText: 'Xác nhận',
-    cancelText: 'Quay lại',
-    onOk() {
-      isTransferred.value = true;
-      currentStep.value = 2;
-    },
-  });
-}
-
-function onStepChangedByClick(step: number) {
-  if (step === 2 && !isTransferred.value)
-    message.warning({ content: 'Bạn phải xác nhận thanh toán trước khi chuyển đến bước này', duration: 2 });
-};
-
-function onClickRedirectToPaymentForm() {
-  if (!isTransferred.value)
-    return;
-  try {
-    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank')?.focus();
-  } catch (e) {
-    console.error('cannot redirect');
-  }
-};
 </script>
 
 <style scoped lang="less">

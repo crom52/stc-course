@@ -1,6 +1,6 @@
 <template>
   <AConfigProvider
-    :locale="enUs"
+    :locale="viVn"
     :theme="seedTokenGlobalConfig"
   >
     <RouterView #="{ Component }">
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import enUs from 'ant-design-vue/es/locale/en_US';
+import viVn from 'ant-design-vue/es/locale/vi_VN';
 import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context';
 
 const seedTokenGlobalConfig: ThemeConfig = {

@@ -4,73 +4,17 @@
       :current="currentStepKey"
       direction="vertical"
       :responsive="false"
+      class="cursor-default!"
       @change="onStepChangedByClick"
     >
-      <AStep disabled>
-        <template #title>
-          <p class="font-700">
-            Thông tin học viên ghi danh
-          </p>
-        </template>
-        <template #description>
-          <div class="card-warp max-w-500">
-            <AForm
-              ref="formRef"
-              :model="formState"
-              :rules="rules"
-              @finish="handleFinish"
-            >
-              <div>
-                <AFormItem name="name">
-                  <p class="mb-4 text-gray-6 font-600">
-                    Họ và tên
-                  </p>
-                  <AInput
-                    v-model:value="formState.name"
-                    :maxlength="50"
-                    size="large"
-                  />
-                </AFormItem>
-
-                <AFormItem name="phone">
-                  <p class="mb-4 text-gray-6 font-600">
-                    Số điện thoại
-                  </p>
-                  <AInput
-                    v-model:value="formState.phone"
-                    :maxlength="12"
-                    type="number"
-                    size="large"
-                  />
-                </AFormItem>
-              </div>
-
-              <!-- Submit -->
-              <div class="mt-50 flex justify-end">
-                <AButton
-                  htmlType="submit"
-                  :disabled="false"
-                  class="h-40 bg-green-4 b-white! text-white!"
-                >
-                  <div>
-                    Đến bước tiếp theo
-                    <i class="i-iconamoon:arrow-right-6-circle-fill" />
-                  </div>
-                </AButton>
-              </div>
-            </AForm>
-          </div>
-        </template>
-      </AStep>
-
-      <AStep disabled>
+      <AStep :disabled="currentStepKey !== 0">
         <template #title>
           <p class="font-700">
             Thông tin thanh toán và chuyển khoản
           </p>
         </template>
         <template #description>
-          <div v-if="currentStepKey > 0">
+          <div>
             <div class="card-warp">
               <div class="flex-bc flex-wrap font-600">
                 <p class="text-gray">
@@ -84,6 +28,38 @@
             <div class="card-warp mt-16 flex gap-16">
               <div class="flex-1">
                 <h6 class="bank-highlight">
+                  Thông tin học viên
+                </h6>
+                <AForm
+
+                  :model="formState"
+                >
+                  <AFormItem name="name" v-bind="validateInfos.name">
+                    <p class="mb-4 text-14 text-gray-7 font-500">
+                      Họ và tên
+                    </p>
+                    <AInput
+                      :value="formState.name"
+                      :maxlength="50"
+                      @input="onInputNameHandler"
+                    />
+                  </AFormItem>
+
+                  <AFormItem name="phone" v-bind="validateInfos.phone">
+                    <p class="mb-4 text-14 text-gray-7 font-500">
+                      Số điện thoại
+                    </p>
+                    <AInput
+                      :value="formState.phone"
+                      :maxlength="12"
+                      @input="onInputPhoneHandler"
+                    />
+                  </AFormItem>
+                </AForm>
+
+                <hr class="my-18">
+
+                <h6 class="bank-highlight">
                   Chuyển khoản ngân hàng Việt Nam
                 </h6>
 
@@ -95,13 +71,15 @@
                         <p class="min-w-150 text-gray">
                           {{ item.title }}
                         </p>
-                        <CopyableText
-                          :copyContent="item.copyContent || ''"
-                          showIcon
-                          class="cursor-pointer whitespace-nowrap"
-                        >
-                          {{ item.displayContent }}
-                        </CopyableText>
+                        <div>
+                          <CopyableText
+                            :copyContent="item.copyContent || ''"
+                            showIcon
+                            class="overflow-warp max-w-300 cursor-pointer"
+                          >
+                            {{ item.displayContent }}
+                          </CopyableText>
+                        </div>
                       </div>
                     </template>
 
@@ -110,7 +88,11 @@
                         <p class="min-w-150 text-gray">
                           {{ item.title }}
                         </p>
+                        <p v-if="!paymentContent" class="max-w-200 text-right text-12 text-red-3">
+                          Nội dung này sẽ được tạo tự động. <span class="block">Vui lòng điền tên và SĐT của bạn</span>
+                        </p>
                         <CopyableText
+                          v-else
                           :copyContent="paymentContent || ''"
                           showIcon
                           class="cursor-pointer whitespace-nowrap whitespace-nowrap text-right"
@@ -125,10 +107,19 @@
                 <!-- confirm -->
                 <p class="mt-32 md:mt-90">
                   <i class="i-iconamoon:information-circle-fill text-blue-5" />
-                  <span class="text-gray-5">
+                  <span class="text-14 text-gray-5">
                     Chụp lại màn hình chuyển khoản để xác nhận thanh toán
                   </span>
                 </p>
+                <div class="mt-16 text-center">
+                  <AButton
+                    :disabled="!paymentContent"
+                    class="bg-green text-white font-500 hover:!text-gray-3"
+                    @click="onClickTransferredHandler"
+                  >
+                    Đã thanh toán
+                  </AButton>
+                </div>
               </div>
               <div class="hidden flex-1 b-l-2 b-abd md:block">
                 <div class="mx-auto h-400 w-fit overflow-hidden rounded-20">
@@ -141,9 +132,6 @@
               </div>
             </div>
           </div>
-          <p v-else class="text-16 text-gray font-500">
-            Bạn cần hoàn thiện bước 1 để được hướng dẫn bước này
-          </p>
         </template>
       </AStep>
 
@@ -155,7 +143,7 @@
         </template>
         <template #description>
           <div
-            v-if="currentStepKey > 0"
+            v-if="currentStepKey === 1 && paymentContent"
             class="cursor-pointer text-blue hover:underline"
             @click="onClickRedirectToPaymentGoogleForm"
           >
@@ -163,7 +151,7 @@
             <i class="i-material-symbols:arrow-outward-rounded" />
           </div>
           <p v-else class="text-16 text-gray font-500">
-            Bạn cần hoàn thiện bước 2 để được hướng dẫn bước này
+            Xác nhận <span class="font-600">"Đã thanh toán"</span> trước khi chuyển đến bước này
           </p>
         </template>
       </AStep>
@@ -172,25 +160,36 @@
 </template>
 
 <script lang="ts" setup>
-import type { FormInstance } from 'ant-design-vue';
 import type { Rule } from 'ant-design-vue/es/form';
+import { Form } from 'ant-design-vue';
 import { formatVND, getImg } from '@/utils/common.util';
+
+const useForm = Form.useForm;
 
 const BASE_PRICE = 25000000;
 
 const currentStepKey = ref<number>(0);
-
-const formRef = ref<FormInstance>();
-
 const formState = reactive({
   name: '',
   phone: '',
 });
+const rulesRef = reactive({
+  name: [{ validator: checkName, trigger: 'change', warningOnly: true }],
+  phone: [{ required: true, validator: checkPhone, trigger: 'change' }],
+});
+
+const { validate, validateInfos } = useForm(formState, rulesRef);
 
 const paymentContent = computed(() => {
+  const isValidatePhoneSuccess = validateInfos?.phone?.validateStatus === 'success';
+  const isValidateNameSuccess = validateInfos?.name?.validateStatus === 'success';
+
+  if (!isValidatePhoneSuccess || !isValidateNameSuccess)
+    return null;
+
   const name = formState.name.trim().normalize('NFD').replace(/[\u0300-\u036F]/g, '');
 
-  return `STCK03 - ${name} - ${formState.phone}`;
+  return `STCK03 ${name.toUpperCase()} ${formState.phone}`;
 });
 
 const bankInfo = [
@@ -238,7 +237,7 @@ function onClickRedirectToPaymentGoogleForm() {
   }
 };
 
-const checkName = async (_rule: Rule, value: string) => {
+async function checkName(_rule: Rule, value: string) {
   const trimmedName = value.trim();
   if (!trimmedName)
     return Promise.reject(new Error('Nhập tên của bạn'));
@@ -252,26 +251,54 @@ const checkName = async (_rule: Rule, value: string) => {
   return Promise.resolve();
 };
 
-const checkPhone = async (_rule: Rule, value: number) => {
-  if (!value)
+async function checkPhone(_rule: Rule, value: string) {
+  const isEmpty = !value?.toString();
+  const isNaN = typeof Number(value) !== 'number';
+  const isValidBegin = value.slice(0, 2) === '84' || value.charAt(0) === '0';
+  if (isEmpty)
     return Promise.reject(new Error('Nhập số điện thoại của bạn'));
 
-  if (Array.from(value?.toString())[0] !== '0')
-    return Promise.reject(new Error('Số điện thoại phải bắt đầu bằng số 0'));
-
-  if (value?.toString()?.length < 8 || value?.toString()?.length > 12)
+  if (isNaN || !isValidBegin || value?.length < 8 || value.length > 12)
     return Promise.reject(new Error('Số điện thoại chưa đúng định dạng'));
 
   return Promise.resolve();
 };
 
-const rules: Record<string, Rule[]> = {
-  name: [{ validator: checkName, trigger: 'change', warningOnly: true }],
-  phone: [{ required: true, validator: checkPhone, trigger: 'change' }],
+function onInputPhoneHandler(e: any) {
+  currentStepKey.value = 0;
+  const text = e?.target?.value ?? '';
+  const numericValue = text.replace(/\D/g, '');
+  formState.phone = numericValue;
+  e.target.value = numericValue;
 };
 
-const handleFinish = () => {
-  currentStepKey.value = 1;
+function onInputNameHandler(e: any) {
+  currentStepKey.value = 0;
+  const text = e?.target?.value ?? '';
+  if (text.charAt(0) === ' ') {
+    formState.name = '';
+    e.target.value = '';
+
+    return;
+  }
+
+  if (text.slice(-2) === '  ') {
+    formState.name = text.slice(0, -1);
+    e.target.value = text.slice(0, -1);
+
+    return;
+  }
+  formState.name = text;
+  e.target.value = text;
+};
+
+async function onClickTransferredHandler() {
+  try {
+    await validate();
+    currentStepKey.value = 1;
+  } catch (error) {
+    currentStepKey.value = 0;
+  }
 };
 </script>
 
