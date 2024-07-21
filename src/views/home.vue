@@ -135,12 +135,12 @@ onMounted(async () => {
     loop: true,
     loopDelay: 1500,
   })
-    .type('Đừng FOMO')
+    .type('<span class="text-red1">Đừng FOMO</span>')
     .break()
     .type('Đầu tư hiệu quả')
     .break()
     .type('bằng kiến thức', { delay: 1500 })
-    .empty()
+    .delete()
     .type('Chọn dự án chất lượng')
     .break()
     .type('Đừng chọn số lượng')
