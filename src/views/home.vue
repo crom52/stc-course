@@ -132,12 +132,12 @@ onMounted(async () => {
   await sleep(500);
   new TypeIt('#stcSlogan', {
     speed: 50,
-    strings: ['Đừng FOMO'],
     loop: true,
     loopDelay: 1500,
   })
+    .type('Đừng FOMO')
     .break()
-    .type('Đầu tư hiệu quả',  {})
+    .type('Đầu tư hiệu quả')
     .break()
     .type('bằng kiến thức', { delay: 1500 })
     .empty()
