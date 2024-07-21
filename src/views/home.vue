@@ -126,16 +126,18 @@
 
 <script lang="ts" setup>
 import TypeIt from 'typeit';
-import { getImg } from '@/utils/common.util';
+import { getImg, sleep } from '@/utils/common.util';
 
-onMounted(() => {
+onMounted(async () => {
+  await sleep(500);
   new TypeIt('#stcSlogan', {
     speed: 50,
     strings: ['Đừng FOMO'],
     loop: true,
+    loopDelay: 1500,
   })
     .break()
-    .type('Đầu tư hiệu quả')
+    .type('Đầu tư hiệu quả',  {})
     .break()
     .type('bằng kiến thức', { delay: 1500 })
     .empty()
@@ -144,8 +146,6 @@ onMounted(() => {
     .type('Đừng chọn số lượng')
     .go();
 });
-
-const display = ref<boolean>(false);
 </script>
 
 <style scoped lang="less">
