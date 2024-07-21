@@ -12,6 +12,7 @@ node_modules
 dist
 *.local
 public
+package.json
 
 # Editor directories and files
 .vscode/*

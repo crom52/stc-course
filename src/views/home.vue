@@ -27,35 +27,7 @@
             md="text-left ml-50px md:text-5.5vw"
             lg="text-70"
           >
-            <TransitionGroup
-              name="fade"
-              tag="ul"
-              class="grid h-full items-center"
-              mode="out-in"
-            >
-              <li
-                v-show="!display"
-                key="1"
-              >
-                <p class="text-red1">
-                  Đừng FOMO
-                </p>
-                <p>
-                  Đầu tư hiệu quả <span class="block">bằng kiến thức</span>
-                </p>
-              </li>
-
-              <li
-                v-show="display"
-                key="2"
-              >
-                <p>Chọn dự án chất lượng</p>
-                <p class="inline-block">
-                  Đừng chọn số lượng
-                </p>
-              </li>
-            </TransitionGroup>
-
+            <p id="stcSlogan" class="mt-10%" />
             <div class="absolute bottom-30 left-16 right-16 z-120 grid items-stretch gap-8 lg:bottom-100 md:(left-80 flex)">
               <AButton
                 class="h-50 text-18 md:w-200"
@@ -101,7 +73,6 @@
       </div>
     </div>
 
-    <!-- card course name span 1 -->
     <div
       class="col-span-4 row-span-2 overflow-hidden rounded-20 bg-white shadow-xl"
       sm="col-span-2"
@@ -154,13 +125,27 @@
 </template>
 
 <script lang="ts" setup>
+import TypeIt from 'typeit';
 import { getImg } from '@/utils/common.util';
 
-const display = ref<boolean>(false);
+onMounted(() => {
+  new TypeIt('#stcSlogan', {
+    speed: 50,
+    strings: ['Đừng FOMO'],
+    loop: true,
+  })
+    .break()
+    .type('Đầu tư hiệu quả')
+    .break()
+    .type('bằng kiến thức', { delay: 1500 })
+    .empty()
+    .type('Chọn dự án chất lượng')
+    .break()
+    .type('Đừng chọn số lượng')
+    .go();
+});
 
-setInterval(() => {
-  display.value = !display.value;
-}, 2000);
+const display = ref<boolean>(false);
 </script>
 
 <style scoped lang="less">
