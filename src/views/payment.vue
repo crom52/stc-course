@@ -42,7 +42,6 @@ const seedTokenGlobalConfig: ThemeConfig = {
     borderRadius: 10,
   },
 };
-
 const activeKey = ref('bank');
 </script>
 
