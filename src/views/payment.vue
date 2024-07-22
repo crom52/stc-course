@@ -19,7 +19,7 @@
           <!-- Tab2 -->
           <ATabPane key="crypto">
             <template #tab>
-              <span class="tag-title">Donate bằng Cryto</span>
+              <span class="tag-title">Donate bằng Crypto</span>
             </template>
 
             <template #default>
