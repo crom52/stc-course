@@ -15,9 +15,14 @@
               <p class="text-gray">
                 Tổng học phí:
               </p>
-              <p class="text-18 text-green">
-                {{ BASE_PRICE.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
-              </p>
+              <ul class="text-right">
+                <li class="decoration-text-red1 text-14 text-red1 font-600 line-through">
+                  {{ BASE_PRICE.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
+                </li>
+                <li class="text-green font-700">
+                  {{ DISCOUNTED_PRICE.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
+                </li>
+              </ul>
             </div>
           </div>
         </template>
@@ -30,7 +35,7 @@
         <template #description>
           <div class="card-warp">
             <h6 class="bank-highlight text-gray-6">
-              Donate trực tiếp <span class="text-red1">USDT, USDC</span> vào địa chỉ ví
+              Donate trực tiếp <span class="text-red1 font-800">USDT, USDC</span> vào địa chỉ ví
             </h6>
             <div class="pl-16">
               <CopyableText
@@ -47,7 +52,17 @@
               Mạng: <span class="font-600">ERC20</span> / <span class="font-600">Arbitrum One</span> / <span class="font-600">Base</span> / <span class="font-600">BEP20</span>
             </p>
 
-            <h6 class="bank-highlight mt-32 text-gray-6">
+            <ADivider
+              orientation="left"
+              orientationMargin="0px"
+            >
+              <div class="text-14 text-gray">
+                <i class="i-material-symbols-light-orbit-rounded mr-4" />
+                <span>Hoặc</span>
+              </div>
+            </ADivider>
+
+            <h6 class="bank-highlight text-gray-6">
               Link donate Copperx
             </h6>
             <div class="pl-16">
@@ -81,7 +96,8 @@
 </template>
 
 <script lang="ts" setup>
-const BASE_PRICE = 999;
+const BASE_PRICE = 799;
+const DISCOUNTED_PRICE = 599;
 const currentStep = ref<number>(1);
 
 function onClickRedirectToPaymentGoogleForm() {

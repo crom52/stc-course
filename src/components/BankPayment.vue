@@ -20,9 +20,17 @@
                 <p class="text-gray">
                   Tổng học phí:
                 </p>
-                <p class="text-18 text-green">
+                <ul class="text-right">
+                  <li class="decoration-text-red1 text-14 text-red1 font-600 line-through">
+                    {{ formatVND(BASE_PRICE) }}
+                  </li>
+                  <li class="text-green font-700">
+                    {{ formatVND(DISCOUNT_PRICE) }}
+                  </li>
+                </ul>
+                <!-- <p class="text-18 text-green">
                   {{ formatVND(BASE_PRICE) }}
-                </p>
+                </p> -->
               </div>
             </div>
             <div class="card-warp mt-16 flex gap-16">
@@ -166,7 +174,8 @@ import { formatVND, getImg } from '@/utils/common.util';
 
 const useForm = Form.useForm;
 
-const BASE_PRICE = 25000000;
+const BASE_PRICE = 19900000;
+const DISCOUNT_PRICE = 14900000;
 
 const currentStepKey = ref<number>(0);
 const formState = reactive({

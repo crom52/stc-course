@@ -1,9 +1,12 @@
 <template>
   <div class="main-page details-page font-page mx-auto max-w-1000 px-16">
+    <div class="h-40 rounded-bl-10 rounded-br-10 bg-yel1/50 px-16 text-18 text-red1 font-700 leading-40">
+      Chọn một trong hai hình thức thanh toán bên dưới
+    </div>
     <AConfigProvider
       :theme="seedTokenGlobalConfig"
     >
-      <div class="tag-container">
+      <div class="tag-container mt-16">
         <ATabs v-model:activeKey="activeKey">
           <!-- Tab1 -->
           <ATabPane key="bank">
