@@ -1,20 +1,35 @@
 <template>
   <div class="main-page main-warp">
-    <!-- folder1 -->
+    <div class="marquee-section fixed left-0 top-0 z-200 h-40 w-full bg-#f0cf4f text-18 md:hidden">
+      <div class="marquee-div">
+        <div class="marquee">
+          <div class="ml-200 text-18 font-400">
+            Khuyến mãi<span class="mx-4 text-20 text-red1 font-700">5.000.000 VND</span>cho mỗi follower khi đăng ký trước ngày 08/08/2024 cùng với phần thưởng lên đến 200USDT từ Bybit và STC Capital
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="relative col-span-4 row-span-2"
       lg="row-span-4"
     >
       <div class="folder bg-#faebd7">
-        <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
+        <div
+          class="absolute top--70 grid h-70 w-full items-center justify-center"
+          md="justify-between flex"
+        >
           <img
             class="ml-8 mr-8 h-55"
             :src="getImg('stc-logo.png')"
             alt="stc logo"
           >
-          <div class="h-50 w-full rounded-5 bg-yel1/80 px-20 md:w-65% md:rounded-br-40">
+          <div
+            class="hidden h-90 w-full rounded-5 bg-#f0cf4f px-20 md:block"
+            md="h-60 w-65% rounded-br-40"
+          >
             <div class="h-full flex items-center text-18 font-400">
-              Giảm <span class="mx-4 text-20 text-red1 font-700">30%</span> khi đăng ký trước ngày <span class="ml-4 text-20 text-red1 font-700">08/08/2024</span>
+              <span>Khuyến mãi<span class="mx-4 text-20 text-red1 font-700">5.000.000 VND</span>cho mỗi follower khi đăng ký trước ngày 08/08/2024 cùng với phần thưởng lên đến 200USDT từ Bybit và STC Capital</span>
             </div>
           </div>
           <AButton
@@ -168,8 +183,9 @@ onMounted(async () => {
 }
 
 .main-warp {
-  @apply max-w-1400 mx-auto p-16 mt-65;
+  @apply max-w-1400 mx-auto p-16 md:mt-65;
   @apply grid gap-16 grid-cols-4 md:(grid-rows-6);
+  @apply mt-100
   min-height: calc(100vh - 70rem);
 }
 
@@ -187,5 +203,28 @@ onMounted(async () => {
     transform: scaleX(-1); /* Adjust the angle as */
 
   }
+}
+
+.marquee-section, .marquee-section * {
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+}
+
+.marquee-div {
+    position: absolute;
+    animation: move-right-to-left linear 6s infinite;
+}
+
+/* use this one to move from right to left direction */
+@keyframes move-right-to-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 </style>

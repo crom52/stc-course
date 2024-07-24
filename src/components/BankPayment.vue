@@ -133,7 +133,7 @@
                 <div class="mx-auto h-7/8 w-fit overflow-hidden rounded-20">
                   <img
                     class="h-full"
-                    :src="getImg('qr-14tr9.jpg')"
+                    :src="getImg('qr-15tr.png')"
                     alt="qr payment"
                   >
                 </div>

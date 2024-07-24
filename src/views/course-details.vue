@@ -124,6 +124,7 @@
       <article>
         <p>Khi tham gia khóa học, bạn sẽ nhận được:</p>
         <ul>
+          <li>Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024 cho 20 người đầu tiên.</li>
           <li>Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</li>
           <li>Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</li>
           <li>Ưu đãi giảm giá 30% dành cho 20 người đăng ký đầu tiên.</li>
