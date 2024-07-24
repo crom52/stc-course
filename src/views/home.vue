@@ -8,10 +8,15 @@
       <div class="folder bg-#faebd7">
         <div class="absolute top--70 h-70 w-full flex flex items-center justify-center md:justify-between">
           <img
-            class="ml-8 h-55"
+            class="ml-8 mr-8 h-55"
             :src="getImg('stc-logo.png')"
             alt="stc logo"
           >
+          <div class="h-50 w-full rounded-5 bg-yel1/80 px-20 md:w-65% md:rounded-br-40">
+            <div class="h-full flex items-center text-18 font-400">
+              Giảm <span class="mx-4 text-20 text-red1 font-700">30%</span> khi đăng ký trước ngày <span class="ml-4 text-20 text-red1 font-700">08/08/2024</span>
+            </div>
+          </div>
           <AButton
             class="z-100 mr-30 mt-12 hidden h-50 w-200 bg-red1 text-18 text-white font-800 md:block"
             shape="round"

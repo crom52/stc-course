@@ -131,10 +131,10 @@
         <ul>
           <li>
             Email: <a
-              href="mailto:someone@example.com"
+              href="courses@saigontradecoin.com"
               target="_blank"
               class="text-blue hover:underline"
-            >mailto:someone@example.com</a> Hoặc <a
+            >courses@saigontradecoin.com</a> Hoặc <a
               href="courses@stc.capital"
               target="_blank"
               class="text-blue hover:underline"
