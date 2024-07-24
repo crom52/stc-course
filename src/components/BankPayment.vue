@@ -33,7 +33,7 @@
                 </p> -->
               </div>
             </div>
-            <div class="card-warp mt-16 flex gap-16">
+            <div class="card-warp mt-16 h-600 flex gap-16">
               <div class="flex-1">
                 <h6 class="bank-highlight">
                   Thông tin học viên
@@ -133,7 +133,7 @@
                 <div class="mx-auto h-7/8 w-fit overflow-hidden rounded-20">
                   <img
                     class="h-full"
-                    :src="getImg('qr-25tr.png')"
+                    :src="getImg('qr-14tr9.jpg')"
                     alt="qr payment"
                   >
                 </div>
