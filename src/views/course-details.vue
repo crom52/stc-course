@@ -1,13 +1,13 @@
 <template>
   <div class="main-page details-page mx-auto mt-16 max-w-900 px-32">
-    <div class="text-16 text-gray-6 font-400 leading-20">
-      <h1>HOLD from Zero to Hero: Khóa Học Đầu Tư Crypto 2024</h1>
+    <div class="text-18 text-gray-8 font-400 leading-26">
+      <h1>HODL from Zero to Hero:<span class="ml-16 inline-block">Khóa Học Đầu Tư Crypto 2024</span></h1>
       <hr>
 
       <h3>Lời ngỏ</h3>
       <hr>
       <article>
-        <p class="reffer-qoutes">
+        <p class="reffer-qoutes mb-32">
           "Lừa dối thị trường là điều tồi tệ nhất. Thị trường sẽ trả lời bằng cách lấy tiền của bạn." <span class="inline-block">- Jesse Livermore</span>
         </p>
         <div class="content-warpper">
@@ -18,7 +18,7 @@
             Giữa thời đại công nghệ phát triển như vũ bão, "cơn sốt" tiền điện tử đang thu hút sự quan tâm mãnh liệt của mọi người. Một số người tò mò khám phá điều mới mẻ, một số khác lại thấy cơ hội đầu tư tiềm năng. Nhưng với mục đích gì, tôi nghĩ rằng chúng ta cần phải chuẩn bị hành trang kiến thức kĩ lưỡng trước khi bước vào thị trường màu mỡ nhưng cũng đầy cam go này.
           </p>
           <p>
-            Sau hơn 20 năm kinh nghiệm trong thị trường tài chính, đặc biệt là 7 năm gắn bó cùng crypto, tôi đã tích lũy được nhiều bài học quý giá từ những thành công và thất bại. Tôi tin rằng những bài học, kinh nghiệm ấy sẽ được truyền tải một cách thực tiễn và sâu sắc nhất thông qua khóa học HODL from Zero to Hero mà tôi sẽ mang đến cho bạn.
+            Sau hơn 20 năm kinh nghiệm trong thị trường tài chính, đặc biệt là 7 năm gắn bó cùng crypto, tôi đã tích lũy được nhiều bài học quý giá từ những thành công và thất bại. Tôi tin rằng những bài học, kinh nghiệm ấy sẽ được truyền tải một cách thực tiễn và sâu sắc nhất thông qua khóa học <span class="inline-block font-700">HODL from Zero to Hero</span> mà tôi sẽ mang đến cho bạn.
           </p>
         </div>
       </article>
@@ -39,10 +39,21 @@
       <hr>
       <article>
         <p>HODL - một thuật ngữ quen thuộc trong cộng đồng crypto, bắt nguồn từ lỗi đánh máy của "Hold" (nắm giữ). Nhưng với chúng tôi, HODL còn có ý nghĩa sâu sắc hơn:</p>
-        <p>H - Hiểu biết bản chất của thị trường O - Ổn định tâm lý trước biến động D - Dự đoán xu hướng chính xác L - Lựa chọn dự án chất lượng</p>
-        <p>Trong khóa học 3 ngày, chúng ta sẽ cùng nhau:</p>
 
-        <h6>1. Xây dựng tư duy đầu tư dài hạn:</h6>
+        <div class="grid my-32 ml-4 gap-8">
+          <p><span class="font-600">H</span>  - Hiểu biết bản chất của thị trường</p>
+          <p><span class="font-600">O</span> - Ổn định tâm lý trước biến động</p>
+          <p><span class="font-600">D</span> - Dự đoán xu hướng chính xác</p>
+          <p><span class="font-600">L</span> - Lựa chọn dự án chất lượng</p>
+        </div>
+
+        <p>
+          Trong khóa học 3 ngày, chúng ta sẽ cùng nhau:
+        </p>
+        <br>
+        <h6>
+          <span class="mr-16">1.</span>Xây dựng tư duy đầu tư dài hạn:
+        </h6>
         <ul>
           <li>Hiểu về chu kỳ thị trường crypto.</li>
           <li>Phân biệt đầu cơ và đầu tư.</li>
@@ -50,7 +61,7 @@
           <li>Xây dựng chiến lược đầu tư dài hạn và hiệu quả.</li>
         </ul>
 
-        <h6>2. Phân tích dự án từ A đến Z:</h6>
+        <h6><span class="mr-16">2.</span>Phân tích dự án từ A đến Z:</h6>
         <ul>
           <li>Đánh giá tokenomics và mô hình kinh tế của dự án.</li>
           <li>Phân tích đội ngũ, công nghệ và lộ trình phát triển.</li>
@@ -59,7 +70,7 @@
           <li>Tầm nhìn dự án và xu hướng hiện tại.</li>
         </ul>
 
-        <h6>3. Phân tích kỹ thuật - Chìa khóa để đọc vị thị trường:</h6>
+        <h6><span class="mr-16">3.</span>Phân tích kỹ thuật - Chìa khóa để đọc vị thị trường:</h6>
         <ul>
           <li>Chia sẻ các kinh nghiệm sử dụng mà tôi đã áp dụng trong suốt hơn 20 năm đầu tư.</li>
           <li>Học cách đọc và phân tích các mô hình nến, vùng hỗ trợ, kháng cự,...</li>
@@ -69,7 +80,7 @@
           <li>Áp dụng các lý thuyết lớn như sóng Elliott để dự đoán xu hướng thị trường.</li>
         </ul>
 
-        <h6>4. Chiến lược quản lý rủi ro và bảo vệ tài sản:</h6>
+        <h6><span class="mr-16">4.</span>Chiến lược quản lý rủi ro và bảo vệ tài sản:</h6>
         <ul>
           <li>Xác định mức chịu đựng rủi ro cá nhân.</li>
           <li>Xây dựng và theo dõi danh mục đầu tư.</li>
@@ -80,7 +91,7 @@
           <li>Quản lý vị thế trong các tình huống thị trường khác nhau.</li>
         </ul>
 
-        <h6>5. Các cách kiếm tiền mới trong crypto:</h6>
+        <h6><span class="mr-16">5.</span>Các cách kiếm tiền mới trong crypto:</h6>
         <ul>
           <li>Staking: tối ưu hóa lợi nhuận từ việc nắm giữ coin.</li>
           <li>Tham gia airdrop, refferals.</li>
@@ -89,7 +100,7 @@
           <li>Tận dụng cơ hội từ IDO, IEO và Launchpad.</li>
         </ul>
 
-        <h6>6. Bảo vệ tài sản khi tham gia:</h6>
+        <h6><span class="mr-16">6.</span>Bảo vệ tài sản khi tham gia:</h6>
         <ul>
           <li>Nhận biết và phòng tránh các loại lừa đảo phổ biến trong crypto.</li>
           <li>Quản lý cold wallet và hot wallet an toàn.</li>
@@ -99,8 +110,8 @@
       <h3>Thời gian và địa điểm</h3>
       <hr>
       <article>
-        <h6>Khóa học sẽ diễn ra trong 3 ngày:</h6>
-        <ul>
+        <p>Khóa học sẽ diễn ra trong 3 ngày:</p>
+        <ul class="pl-32">
           <li>Tại Hà Nội: 09 - 11 tháng 8</li>
           <li>Tại Hồ Chí Minh: 23 - 25 tháng 8</li>
         </ul>
@@ -109,14 +120,14 @@
       <h3>Ưu đãi đặc biệt</h3>
       <hr>
       <article>
-        <h6>Khi tham gia khóa học, bạn sẽ nhận được:</h6>
+        <p>Khi tham gia khóa học, bạn sẽ nhận được:</p>
         <ul>
           <li>Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</li>
           <li>Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</li>
           <li>Ưu đãi giảm giá 30% dành cho 20 người đăng ký đầu tiên.</li>
           <li>Quà tặng $150 ($100 tiền mặt + $50 bonus) khi đăng ký tài khoản Bybit qua STC, để bạn có thể bắt đầu thực hành ngay.</li>
         </ul>
-        <p class="reffer-qoutes my-16">
+        <p class="reffer-qoutes my-32">
           "Hãy đầu tư vào kiến thức của bạn. Không có ai có thể cướp đi nó."<span class="inline-block">- Benjamin Franklin</span>
         </p>
         <p>Với kiến thức đúng đắn và sự hỗ trợ từ cộng đồng, tôi tin rằng mỗi bạn đều có thể trở thành một "Hero" trong lĩnh vực này Tôi mong được gặp các bạn trong khóa học!</p>
@@ -169,37 +180,35 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 .details-page{
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 hr {
-  @apply mt-8 mb-16
+  @apply mt-8 mb-16 b-gray-4
 }
 
 h1 {
-  @apply text-22 font-900;
+  @apply text-30 font-900;
 }
 h3 {
-  @apply mt-32 text-20 font-700;
-}
-
-ul {
-  @apply list-circle pl-32 leading-24;
+  @apply mt-32 text-27 font-700;
 }
 
 h6 {
- @apply mt-16 font-500 mb-8;
+ @apply ml-16 mt-16 font-700 mb-8;
 }
-article {
-  @apply pl-16;
+
+ul {
+  @apply list-circle mt-8 mb-32 pl-50 leading-32;
 }
 
 .reffer-qoutes {
-  @apply border-l-3 b-gray pl-16 text-14 italic;
+  @apply border-l-3 b-gray-4 text-gray-5 pl-16 italic;
 }
 .content-warpper {
-  @apply grid mt-16 gap-16;
+  @apply grid mt-16 gap-20;
 }
 </style>
