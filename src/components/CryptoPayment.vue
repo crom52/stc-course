@@ -7,7 +7,7 @@
     >
       <AStep disabled>
         <template #title>
-          Xác nhận học phí
+          Xác nhận số tiền donate
         </template>
         <template #description>
           <div class="card-warp">
@@ -81,12 +81,12 @@
       <AStep>
         <template #title>
           <div class="font-700">
-            Xác nhận thanh toán  <i class="i-lets-icons:done-ring-round" />
+            Xác nhận đã donate  <i class="i-lets-icons:done-ring-round" />
           </div>
         </template>
         <template #description>
           <div class="cursor-pointer text-blue hover:underline" @click="onClickRedirectToPaymentGoogleForm">
-            Điều hướng đến Form xác nhận thanh toán
+            Điều hướng đến Form xác nhận đã donate
             <i class="i-material-symbols:arrow-outward-rounded" />
           </div>
         </template>
