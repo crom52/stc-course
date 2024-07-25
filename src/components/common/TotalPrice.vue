@@ -14,11 +14,14 @@
           <i class="i-f7:hand-point-right mr-4" />Link tham gia<i class="i-ic:baseline-telegram mr-4 text-16" />
         </div>
       </div>
+      <!-- crom chỉnh opacity từ 10-90 -->
       <AButton
-        class="cbutton-green mt-16 w-full md:w-fit"
+        class="join-button"
+        :class="{ 'opacity-70': hasJoined }"
         @click="hasJoined = true"
       >
-        Xác nhận đã tham gia
+        <i v-if="hasJoined" class="i-mdi-check-circle-outline mr-4" />
+        {{ hasJoined ? 'Đã tham gia' : 'Xác nhận đã tham gia' }}
       </AButton>
     </div>
 
@@ -55,6 +58,13 @@ const priceInfo = computed(() => ({
 </script>
 
 <style scoped>
+.join-button {
+  @apply mt-16 w-full;
+  /* crom chỉnh màu background kiểu (bg-#b82a2f), chỉnh border (b-#b82a2f)
+   */
+  @apply b-green bg-green text-white hover:text-white!;
+  @apply md:w-fit;
+}
 .active-price {
   @apply md:text-25 text-30;
   @apply text-green font-700;
