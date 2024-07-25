@@ -123,16 +123,52 @@
       <hr>
       <article>
         <p>Khi tham gia khóa học, bạn sẽ nhận được:</p>
-        <ul>
-          <li>Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024. Áp dụng đối với 20 người đầu tiên.</li>
-          <li>Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</li>
-          <li>Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</li>
-          <li>Ưu đãi giảm giá 30% dành cho 20 người đăng ký đầu tiên.</li>
-          <li>Quà tặng $150 ($100 tiền mặt + $50 bonus) khi đăng ký tài khoản Bybit qua STC, để bạn có thể bắt đầu thực hành ngay.</li>
-        </ul>
+        <div class="grid mt-8 gap-8">
+          <p>1. Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024 cho 20 người đăng ký đầu tiên</p>
+          <p>2. Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</p>
+          <p>3. Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</p>
+          <p>4. Ưu đãi độc quyền cùng Bybit và STC Capital: Tổng giá trị lên đến $200 khi mở tài khoản Bybit qua STC.</p>
+        </div>
+
+        <ol>
+          <li>
+            Link đăng ký: <a
+              href="https://partner.bybit.com/b/discount200"
+              target="_blank"
+              class="inline-block text-blue-6 font-500"
+            >https://partner.bybit.com/b/discount200</a>
+          </li>
+
+          <li>Quà tặng chào mừng: $100 ngay khi đăng ký và KYC thành công - Được cung cấp bởi STC.</li>
+          <li>
+            Thưởng nạp tiền từ Bybit:
+            <ul>
+              <li>$50 cho tổng nạp $100.</li>
+              <li>$70 cho tổng nạp $200.</li>
+              <li>$80 cho tổng nạp $300. </li>
+              <li>$100 cho tổng nạp $500.</li>
+            </ul>
+          </li>
+
+          <li>
+            Lưu ý:
+            <ul>
+              <li>Thời hạn: Đến ngày 23/08/2024.</li>
+              <li>Đối tượng áp dụng: Là học viên đăng ký khoá học.</li>
+              <li>Thưởng tiền theo mức nạp cao nhất, không cộng dồn.</li>
+              <li>Số dư tài khoản đến ngày 23 đạt mức nhận thưởng tương ứng.</li>
+              <li>Phần thưởng bonus từ bybit sau khi chương trình kết thúc.</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="mt-32">
+          5. Bộ quà tặng đặc biệt từ Bybit: Túi canvas thời trang cùng với nón và áo.
+        </p>
+
         <p class="reffer-qoutes my-32">
           "Hãy đầu tư vào kiến thức của bạn. Không có ai có thể cướp đi nó."<span class="inline-block">- Benjamin Franklin</span>
         </p>
+
         <p>Với kiến thức đúng đắn và sự hỗ trợ từ cộng đồng, tôi tin rằng mỗi bạn đều có thể trở thành một "Hero" trong lĩnh vực này Tôi mong được gặp các bạn trong khóa học!</p>
       </article>
 
@@ -206,6 +242,10 @@ h6 {
 
 ul {
   @apply list-circle mt-8 mb-32 pl-50 leading-32;
+}
+
+ol {
+  @apply list-disc grid gap-16 mt-32 mb-32 pl-50 leading-32;
 }
 
 .reffer-qoutes {
