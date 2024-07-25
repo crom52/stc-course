@@ -26,5 +26,6 @@ declare module 'vue' {
     RegisterDialog: typeof import('./../src/components/RegisterDialog.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TotalPrice: typeof import('./../src/components/common/TotalPrice.vue')['default']
   }
 }

@@ -20,3 +20,11 @@ export const formatVND = (value: number | string) => {
 
   return num.toLocaleString('en-US', { style: 'currency', currency: 'VND' });
 };
+
+export const openNewTab = (link: string) => {
+  try {
+    window?.open(link, '_blank');
+  } catch (e) {
+    console.error('cannot redirect');
+  }
+};

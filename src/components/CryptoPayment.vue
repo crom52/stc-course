@@ -11,19 +11,10 @@
         </template>
         <template #description>
           <div class="card-warp">
-            <div class="flex-bc flex-wrap font-600">
-              <p class="text-gray">
-                Tổng học phí:
-              </p>
-              <ul class="text-right">
-                <li class="decoration-text-red1 text-14 text-red1 font-600 line-through">
-                  {{ BASE_PRICE.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
-                </li>
-                <li class="text-green font-700">
-                  {{ DISCOUNTED_PRICE.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}
-                </li>
-              </ul>
-            </div>
+            <TotalPrice
+              :basePrice="formatUsd(BASE_PRICE)"
+              :discountedPrice="formatUsd(DISCOUNTED_PRICE)"
+            />
           </div>
         </template>
       </AStep>
@@ -99,6 +90,10 @@
 const BASE_PRICE = 799;
 const DISCOUNTED_PRICE = 599;
 const currentStep = ref<number>(1);
+
+function formatUsd(num: number) {
+  return num.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+};
 
 function onClickRedirectToPaymentGoogleForm() {
   try {

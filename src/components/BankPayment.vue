@@ -16,22 +16,10 @@
         <template #description>
           <div>
             <div class="card-warp">
-              <div class="flex-bc flex-wrap font-600">
-                <p class="text-gray">
-                  Tổng học phí:
-                </p>
-                <ul class="text-right">
-                  <li class="decoration-text-red1 text-14 text-red1 font-600 line-through">
-                    {{ formatVND(BASE_PRICE) }}
-                  </li>
-                  <li class="text-green font-700">
-                    {{ formatVND(DISCOUNT_PRICE) }}
-                  </li>
-                </ul>
-                <!-- <p class="text-18 text-green">
-                  {{ formatVND(BASE_PRICE) }}
-                </p> -->
-              </div>
+              <TotalPrice
+                :basePrice="formatVND(BASE_PRICE)"
+                :discountedPrice="formatVND(DISCOUNT_PRICE)"
+              />
             </div>
             <div class="card-warp mt-16 h-600 flex gap-16">
               <div class="flex-1">
@@ -122,7 +110,7 @@
                 <div class="mt-16 text-center">
                   <AButton
                     :disabled="!paymentContent"
-                    class="bg-green text-white font-500 hover:!text-gray-3"
+                    class="cbutton-green"
                     @click="onClickTransferredHandler"
                   >
                     Đã thanh toán
@@ -153,7 +141,7 @@
           <div
             v-if="currentStepKey === 1 && paymentContent"
             class="cursor-pointer text-blue hover:underline"
-            @click="onClickRedirectToPaymentGoogleForm"
+            @click="openNewTab(GOOGLE_FORM_PAYMENT_LINK)"
           >
             Điều hướng đến Form xác nhận thanh toán
             <i class="i-material-symbols:arrow-outward-rounded" />
@@ -170,7 +158,7 @@
 <script lang="ts" setup>
 import type { Rule } from 'ant-design-vue/es/form';
 import { Form } from 'ant-design-vue';
-import { formatVND, getImg } from '@/utils/common.util';
+import { formatVND, getImg, openNewTab } from '@/utils/common.util';
 
 const useForm = Form.useForm;
 
@@ -238,13 +226,13 @@ function onStepChangedByClick(step: number) {
   currentStepKey.value = step;
 };
 
-function onClickRedirectToPaymentGoogleForm() {
-  try {
-    window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank');
-  } catch (e) {
-    console.error('cannot redirect');
-  }
-};
+// function onClickRedirectToPaymentGoogleForm() {
+//   try {
+//     window?.open('https://stccapital.larksuite.com/share/base/form/shrusXEGjWPhtBFiMSK9VLOXBpc', '_blank');
+//   } catch (e) {
+//     console.error('cannot redirect');
+//   }
+// };
 
 async function checkName(_rule: Rule, value: string) {
   const trimmedName = value.trim();

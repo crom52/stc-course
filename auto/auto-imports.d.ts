@@ -22,12 +22,14 @@ declare global {
   const EXPLORER_TYPE: typeof import('../src/constants/common.constant')['EXPLORER_TYPE']
   const EffectScope: typeof import('vue')['EffectScope']
   const FALL_BACK_MENU_ICON: typeof import('../src/constants/common.constant')['FALL_BACK_MENU_ICON']
+  const GOOGLE_FORM_PAYMENT_LINK: typeof import('../src/constants/common.constant')['GOOGLE_FORM_PAYMENT_LINK']
   const MIN_BLOCK_HASH_LENGTH: typeof import('../src/constants/common.constant')['MIN_BLOCK_HASH_LENGTH']
   const NAMADA_CHROME_EXTENSION_ID: typeof import('../src/constants/common.constant')['NAMADA_CHROME_EXTENSION_ID']
   const NAMADA_SOCIAL_LINKS: typeof import('../src/constants/chain-socical-link.constant')['NAMADA_SOCIAL_LINKS']
   const PERSISTENCE_SOCIAL_LINKS: typeof import('../src/constants/chain-socical-link.constant')['PERSISTENCE_SOCIAL_LINKS']
   const SOCIAL_ICON: typeof import('../src/constants/chain-socical-link.constant')['SOCIAL_ICON']
   const SOCIAL_NAME: typeof import('../src/constants/chain-socical-link.constant')['SOCIAL_NAME']
+  const STC_TELEGRAM_LINK: typeof import('../src/constants/common.constant')['STC_TELEGRAM_LINK']
   const SocialType: typeof import('../src/constants/chain-socical-link.constant')['SocialType']
   const UNHANDLED_SERVER_ERROR: typeof import('../src/constants/common.constant')['UNHANDLED_SERVER_ERROR']
   const UsageChain: typeof import('../src/enums/common.enum')['UsageChain']
@@ -123,6 +125,8 @@ declare module 'vue' {
     readonly APP_NAME: UnwrapRef<typeof import('../src/constants/common.constant')['APP_NAME']>
     readonly AppEnum: UnwrapRef<typeof import('../src/enums/common.enum')['AppEnum']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly GOOGLE_FORM_PAYMENT_LINK: UnwrapRef<typeof import('../src/constants/common.constant')['GOOGLE_FORM_PAYMENT_LINK']>
+    readonly STC_TELEGRAM_LINK: UnwrapRef<typeof import('../src/constants/common.constant')['STC_TELEGRAM_LINK']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
@@ -199,6 +203,8 @@ declare module '@vue/runtime-core' {
     readonly APP_NAME: UnwrapRef<typeof import('../src/constants/common.constant')['APP_NAME']>
     readonly AppEnum: UnwrapRef<typeof import('../src/enums/common.enum')['AppEnum']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly GOOGLE_FORM_PAYMENT_LINK: UnwrapRef<typeof import('../src/constants/common.constant')['GOOGLE_FORM_PAYMENT_LINK']>
+    readonly STC_TELEGRAM_LINK: UnwrapRef<typeof import('../src/constants/common.constant')['STC_TELEGRAM_LINK']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
