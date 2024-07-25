@@ -124,7 +124,7 @@
       <article>
         <p>Khi tham gia khóa học, bạn sẽ nhận được:</p>
         <div class="grid mt-8 gap-8">
-          <p>1. Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024 cho 20 người đăng ký đầu tiên</p>
+          <p>1. Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024. Ưu đãi giảm giá cho 20 người đăng ký đầu tiên</p>
           <p>2. Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</p>
           <p>3. Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</p>
           <p>4. Ưu đãi độc quyền cùng Bybit và STC Capital: Tổng giá trị lên đến $200 khi mở tài khoản Bybit qua STC.</p>
