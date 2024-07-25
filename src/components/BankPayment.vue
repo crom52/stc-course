@@ -130,10 +130,10 @@
                 </div>
               </div>
               <div class="hidden flex-1 b-l-2 b-abd md:block">
-                <div class="mx-auto h-7/8 w-fit overflow-hidden rounded-20">
+                <div class="mx-auto mt-10% h-7/8 w-fit overflow-hidden rounded-20">
                   <img
                     class="h-full"
-                    :src="getImg('qr-15tr.png')"
+                    :src="getImg('qr-free.png')"
                     alt="qr payment"
                   >
                 </div>
