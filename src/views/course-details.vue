@@ -130,7 +130,7 @@
           <p>4. Tặng 150 USDT từ ưu đãi độc quyền của Bybit và STC Capital khi tham gia nhiệm vụ "Trải nghiệm P2P trên Bybit":</p>
 
           <div>
-            <p>Bước 1: Đăng ký tài khoản Bybit tại link STC và hoàn thành KYC:</p>
+            <p>Bước 1: Đăng ký tài khoản Bybit, nhập mã giới thiệu: DISCOUNT200 hoặc qua link STC dưới đây và hoàn thành KYC:</p>
             <a
               href="https://partner.bybit.com/b/discount200"
               target="_blank"
