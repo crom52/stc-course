@@ -88,7 +88,7 @@ Khóa học sẽ diễn ra trong 3 ngày:
 Khi tham gia khóa học, bạn sẽ nhận được:
 - Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.
 - Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025. 
-- Ưu đãi giảm giá 30% dành cho 20 người đăng ký đầu tiên. 
+- Ưu đãi giảm giá 30% dành cho 30 người đăng ký đầu tiên. 
 - Quà tặng $150 ($100 tiền mặt + $50 bonus) khi đăng ký tài khoản Bybit qua STC, để bạn có thể bắt đầu thực hành ngay.
 
 >  *"Hãy đầu tư vào kiến thức của bạn. Không có ai có thể cướp đi nó." - Benjamin Franklin*
