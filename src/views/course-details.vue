@@ -1,5 +1,5 @@
 <template>
-  <div class="main-page details-page mx-auto mt-16 max-w-900 px-32">
+  <div class="details-page main-page mx-auto mt-16 max-w-900 px-32">
     <div class="text-18 text-gray-8 font-400 leading-26">
       <h1 class="leading-35">
         <span class="mr-16">HODL from Zero to Hero:</span><span class="inline-block">Khóa Học Đầu Tư Crypto 2024</span>
