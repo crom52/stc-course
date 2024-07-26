@@ -127,7 +127,28 @@
           <p>1. Khuyến mãi 5.000.000 VND cho mỗi follower khi đăng ký trước ngày 08/08/2024. Ưu đãi giảm giá cho 30 người đăng ký đầu tiên</p>
           <p>2. Cơ hội tham gia cộng đồng học viên độc quyền, nơi chúng ta có thể tiếp tục trao đổi và học hỏi lẫn nhau.</p>
           <p>3. Hỗ trợ tín hiệu và tư vấn từ đội ngũ chuyên gia của STC xuyên suốt năm 2024-2025.</p>
-          <p>4. Ưu đãi độc quyền cùng Bybit và STC Capital: Tổng giá trị lên đến $200 khi mở tài khoản Bybit qua STC.</p>
+          <p>4. Tặng 150 USDT từ ưu đãi độc quyền của Bybit và STC Capital khi tham gia nhiệm vụ "Trải nghiệm P2P trên Bybit":</p>
+
+          <div>
+            <p>Bước 1: Đăng ký tài khoản Bybit tại link STC và KYC:</p>
+            <a
+              href="https://partner.bybit.com/b/discount200"
+              target="_blank"
+              class="inline-block text-blue-6 font-500"
+            >https://partner.bybit.com/b/discount200</a>
+
+            <p class="mt-8">
+              Bước 2: Mua 100 USDT trên Bybit P2P:
+            </p>
+            <a
+              href="https://www.bybitglobal.com/fiat/trade/otc/?actionType=1&token=USDT&fiat=VND&paymentMethod="
+              target="_blank"
+              class="inline-block break-anywhere text-blue-6 font-500"
+            >https://www.bybitglobal.com/fiat/trade/otc/?actionType=1&token=USDT&fiat=VND&paymentMethod=</a>
+            <p class="mt-8">
+              Bước 3: Điền UID trong form ghi danh và nhắn tin cho admin để nhận lại 100 USDT cùng 50 USDT bonus.
+            </p>
+          </div>
         </div>
 
         <ol>
