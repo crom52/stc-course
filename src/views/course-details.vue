@@ -130,7 +130,7 @@
           <p>4. Tặng 150 USDT từ ưu đãi độc quyền của Bybit và STC Capital khi tham gia nhiệm vụ "Trải nghiệm P2P trên Bybit":</p>
 
           <div>
-            <p>Bước 1: Đăng ký tài khoản Bybit tại link STC và KYC:</p>
+            <p>Bước 1: Đăng ký tài khoản Bybit tại link STC và hoàn thành KYC:</p>
             <a
               href="https://partner.bybit.com/b/discount200"
               target="_blank"
@@ -138,13 +138,8 @@
             >https://partner.bybit.com/b/discount200</a>
 
             <p class="mt-8">
-              Bước 2: Mua 100 USDT trên Bybit P2P:
+              Bước 2: Mua 100 USDT trên Bybit P2P
             </p>
-            <a
-              href="https://www.bybitglobal.com/fiat/trade/otc/?actionType=1&token=USDT&fiat=VND&paymentMethod="
-              target="_blank"
-              class="inline-block break-anywhere text-blue-6 font-500"
-            >https://www.bybitglobal.com/fiat/trade/otc/?actionType=1&token=USDT&fiat=VND&paymentMethod=</a>
             <p class="mt-8">
               Bước 3: Điền UID trong form ghi danh và nhắn tin cho admin để nhận lại 100 USDT cùng 50 USDT bonus.
             </p>
@@ -176,8 +171,6 @@
             <ul>
               <li>Thời hạn: Đến ngày 23/08/2024.</li>
               <li>Đối tượng áp dụng: Là học viên đăng ký khoá học.</li>
-              <li>Thưởng tiền theo mức nạp cao nhất, không cộng dồn.</li>
-              <li>Số dư tài khoản đến ngày 23 đạt mức nhận thưởng tương ứng.</li>
               <li>Phần thưởng bonus từ bybit sau khi chương trình kết thúc.</li>
             </ul>
           </li>

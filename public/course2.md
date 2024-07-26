@@ -101,8 +101,6 @@ Khi tham gia khóa học, bạn sẽ nhận được:
 - Lưu ý: 
     - Thời hạn: Đến ngày 23/08/2024
     - Đối tượng áp dụng: Là học viên đăng ký khoá học. 
-    - Thưởng tiền theo mức nạp cao nhất, không cộng dồn.
-    - Số dư tài khoản đến ngày 23 đạt mức nhận thưởng tương ứng. 
     - Phần thưởng bonus từ bybit sau khi chương trình kết thúc. 
 
 5. Bộ quà tặng đặc biệt từ Bybit: Túi canvas thời trang cùng với nón và áo.
