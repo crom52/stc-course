@@ -148,25 +148,6 @@
 
         <ol>
           <li>
-            Link đăng ký: <a
-              href="https://partner.bybit.com/b/discount200"
-              target="_blank"
-              class="inline-block text-blue-6 font-500"
-            >https://partner.bybit.com/b/discount200</a>
-          </li>
-
-          <li>Quà tặng chào mừng: $100 ngay khi đăng ký và KYC thành công - Được cung cấp bởi STC.</li>
-          <li>
-            Thưởng nạp tiền từ Bybit:
-            <ul>
-              <li>$50 cho tổng nạp $100.</li>
-              <li>$70 cho tổng nạp $200.</li>
-              <li>$80 cho tổng nạp $300. </li>
-              <li>$100 cho tổng nạp $500.</li>
-            </ul>
-          </li>
-
-          <li>
             Lưu ý:
             <ul>
               <li>Thời hạn: Đến ngày 23/08/2024.</li>
