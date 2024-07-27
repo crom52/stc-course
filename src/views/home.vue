@@ -4,7 +4,7 @@
       <div class="marquee-div">
         <div class="marquee">
           <div class="ml-200 text-18 font-400">
-            Khuyến mãi<span class="mx-4 text-20 text-red1 font-700">5.000.000 VND</span>cho mỗi follower khi đăng ký trước ngày 08/08/2024 cùng với phần thưởng lên đến 200USDT từ Bybit và STC Capital
+            Khuyến mãi<span class="mx-4 text-20 text-red1 font-700">5.000.000 VND</span>cho 30 followers đầu tiên khi đăng ký trước ngày 08/08/2024 cùng với phần thưởng lên đến 200USDT từ Bybit và STC Capital
           </div>
         </div>
       </div>
