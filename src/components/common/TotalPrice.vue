@@ -6,7 +6,7 @@
       </p>
       <div class="mt-16 text-left text-16">
         <span class="mr-16 "><i class="i-material-symbols-confirmation-number-rounded mr-4 text-red" /><span class="t-black">Tham gia cộng đồng STC để nhận ưu đãi đặc biệt</span></span>
-        <span class="mr-16 break-line t-black">Giá chỉ còn 14tr900/599$</span>
+        <span class="mr-16 break-line t-black">Giá chỉ còn 14.900.000VND/599$</span>
         <div
           md="inline-block mt-0"
           class="my-16 block cursor-pointer text-blue hover:text-blue-5 break-line text-left t-black"
