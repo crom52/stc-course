@@ -5,7 +5,7 @@
         Tổng học phí:
       </p>
       <div class="mt-16 text-center text-16">
-        <span class="mr-16"><i class="i-material-symbols-confirmation-number-rounded mr-4 text-red" /><span>Tham gia cộng đồng STC để được giảm 200$</span></span>
+        <span class="mr-16"><i class="i-material-symbols-confirmation-number-rounded mr-4 text-red" /><span>Tham gia cộng đồng STC để nhận ưu đãi đặc biệt, giá chỉ còn 14tr900 hoặc 599$</span></span>
         <div
           md="inline-block mt-0"
           class="my-16 block cursor-pointer text-blue hover:text-blue-5"
