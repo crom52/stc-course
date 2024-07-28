@@ -53,7 +53,7 @@ const priceInfo = computed(() => ({
   },
   active: {
     amount: props.discountedPrice,
-    className: 'active-price mgb-40percent',
+    className: 'active-price mgb-55percent',
   },
 }));
 </script>
@@ -71,8 +71,8 @@ const priceInfo = computed(() => ({
   @apply text-green font-700;
 }
 
-.mgb-40percent {
-  margin-bottom: 40%;
+.mgb-55percent {
+  margin-bottom: 55%;
 }
 
 .disabled-price {
