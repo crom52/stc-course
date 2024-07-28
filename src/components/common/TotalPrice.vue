@@ -4,25 +4,26 @@
       <p class="hidden self-start text-gray md:block">
         Tổng học phí:
       </p>
-      <div class="mt-16 text-center text-16">
-        <span class="mr-16"><i class="i-material-symbols-confirmation-number-rounded mr-4 text-red" /><span>Tham gia cộng đồng STC để nhận ưu đãi đặc biệt, giá chỉ còn 14tr900 hoặc 599$</span></span>
+      <div class="mt-16 text-left text-16">
+        <span class="mr-16 "><i class="i-material-symbols-confirmation-number-rounded mr-4 text-red" /><span class="t-black">Tham gia cộng đồng STC để nhận ưu đãi đặc biệt</span></span>
+        <span class="mr-16 break-line t-black">Giá chỉ còn 14.900.000VND hoặc 599$</span>
         <div
           md="inline-block mt-0"
-          class="my-16 block cursor-pointer text-blue hover:text-blue-5"
+          class="my-16 block cursor-pointer text-blue hover:text-blue-5 break-line text-left t-black"
           @click="openNewTab(STC_TELEGRAM_LINK)"
         >
           <i class="i-f7:hand-point-right mr-4" />Link tham gia<i class="i-ic:baseline-telegram mr-4 text-16" />
         </div>
       </div>
       <!-- crom chỉnh opacity từ 10-90 -->
-      <AButton
-        class="join-button"
-        :class="{ 'opacity-70': hasJoined }"
-        @click="hasJoined = true"
-      >
-        <i v-if="hasJoined" class="i-mdi-check-circle-outline mr-4" />
-        {{ hasJoined ? 'Đã tham gia' : 'Xác nhận đã tham gia' }}
-      </AButton>
+<!--      <AButton-->
+<!--        class="join-button"-->
+<!--        :class="{ 'opacity-70': hasJoined }"-->
+<!--        @click="hasJoined = true"-->
+<!--      >-->
+<!--        <i v-if="hasJoined" class="i-mdi-check-circle-outline mr-4" />-->
+<!--        {{ hasJoined ? 'Đã tham gia' : 'Xác nhận đã tham gia' }}-->
+<!--      </ApriceInfoButton>-->
     </div>
 
     <ul class="text-center md:text-right">
@@ -47,12 +48,12 @@ const hasJoined = ref<boolean>(false);
 
 const priceInfo = computed(() => ({
   disabled: {
-    amount: hasJoined.value ? props.basePrice : props.discountedPrice,
+    amount: props.basePrice,
     className: 'disabled-price',
   },
   active: {
-    amount: hasJoined.value ? props.discountedPrice : props.basePrice,
-    className: 'active-price',
+    amount: props.discountedPrice,
+    className: 'active-price mgb-40percent',
   },
 }));
 </script>
@@ -68,6 +69,10 @@ const priceInfo = computed(() => ({
 .active-price {
   @apply md:text-25 text-30;
   @apply text-green font-700;
+}
+
+.mgb-40percent {
+  margin-bottom: 40%;
 }
 
 .disabled-price {

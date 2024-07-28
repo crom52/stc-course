@@ -105,3 +105,12 @@
 .fade-leave-active {
   position: absolute !important;
 }
+
+.break-line {
+  display: block;
+  width: 100%;
+}
+.t-black{
+  color: black;
+}
+

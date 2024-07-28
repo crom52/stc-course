@@ -8,18 +8,8 @@
     >
       <div class="tag-container mt-16">
         <ATabs v-model:activeKey="activeKey">
-          <!-- Tab1 -->
-          <ATabPane key="bank">
-            <template #tab>
-              <span class="tag-title">Chuyển khoản ngân hàng</span>
-            </template>
 
-            <template #default>
-              <BankPayment />
-            </template>
-          </ATabPane>
-
-          <!-- Tab2 -->
+          <!-- default: Tab1 -->
           <ATabPane key="crypto">
             <template #tab>
               <span class="tag-title">Donate bằng Crypto</span>
@@ -27,6 +17,17 @@
 
             <template #default>
               <CryptoPayment />
+            </template>
+          </ATabPane>
+
+          <!-- Tab 2 -->
+          <ATabPane key="bank">
+            <template #tab>
+              <span class="tag-title">Chuyển khoản ngân hàng</span>
+            </template>
+
+            <template #default>
+              <BankPayment />
             </template>
           </ATabPane>
         </ATabs>
@@ -45,7 +46,7 @@ const seedTokenGlobalConfig: ThemeConfig = {
     borderRadius: 10,
   },
 };
-const activeKey = ref('bank');
+const activeKey = ref('crypto');
 </script>
 
 <style scoped lang="less">
